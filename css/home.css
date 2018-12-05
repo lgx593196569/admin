@@ -20,6 +20,65 @@
 .active{
     background:rgba(255, 255, 255, .2);
 }
+.biaoqian{
+    width: 110px;
+    height: 130px;
+    position: absolute;
+    background-color: white;
+    top: 50px;
+    left: 4px;
+    display: none;
+}
+#jiantou{
+    height: 20px;
+    position: relative;
+}
+.biaoqian .jiantou{
+    box-shadow: -1px -1px 0 0 #d6d6d6;
+    top: -2px;
+    left: 6px;;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    background: #fff;
+    transform: rotate(45deg);
+}
+.biaoqian .yeqian{
+    margin-left: 15px;
+}
+.biaoqian ul{
+    padding-top: 5px;
+}
+.biaoqian ul li{
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.visite{
+    background: transparent url(../images/icon.svg) no-repeat -283px -34px;
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    width: 12px;
+    height: 8px;
+    cursor: default;
+}
+.admins{
+    width: 110px;
+    margin: 10px auto;
+    text-align: center;
+    color: #2C7BD0;
+    font-size: 15px;
+}
+.admins span{
+    cursor: pointer;
+}
 #chageurl{
     padding-left: 35px;
     width: 55%;
