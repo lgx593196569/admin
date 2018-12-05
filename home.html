@@ -7,43 +7,64 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="font/iconfont.css">
 </head>
 <body>
     <div class="muse">
         <nav>
             <span class="iconsvg lefticon"></span>
-            <ul class="chageurl">
-                <li data-url="./components/index.html">主页</li>
-                <li data-url="./components/line.html">线索</li>
-                <li data-url="./components/contacts.html">联系人</li>
-                <li data-url="./components/customer.html">客户</li>
-                <li data-url="./components/transaction.html">交易</li>
-                <li data-url="./components/task.html">任务、通话及活动</li>
-                <li data-url="./components/form.html">报表</li>
-                <li data-url="./components/anslysis.html">数据分析</li>
-                <li><i class="more"></i></li>
-            </ul>
+            <div id="chageurl">
+                <ul class="chageurl">
+                    <li data-url="./components/index.html" class="active">主页</li>
+                    <li data-url="./components/line.html">线索</li>
+                    <li data-url="./components/contacts.html">联系人</li>
+                    <li data-url="./components/customer.html">客户</li>
+                    <li data-url="./components/transaction.html">交易</li>
+                    <li data-url="./components/task.html">任务、通话及活动</li>
+                    <li data-url="./components/form.html">报表</li>
+                    <li data-url="./components/anslysis.html">数据分析</li>
+                    <li><i class="more"></i></li>
+                </ul>
+            </div>
+            <div class="user">
+
+            </div>
+            
         </nav>
     </div>
     
     <iframe src="./components/index.html" frameborder="0" id="iframe"></iframe>
     <div class="footer">
         <div class="leftbox">
-            <span class="lt"></span>
-            <span class="lxr"></span>
+            <span class="lt icon iconfont icon-weixin" title="聊天"></span>
+            <span class="lxr icon iconfont icon-lianxiren" title="联系人"></span>
         </div>
-        
+        <div class="conbox">
+            <span>这是您的智能聊天( Ctrl + Space )</span>
+        </div>
+        <div class="rightbox">
+            <ul>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+            </ul>    
+        </div>
     </div>
 </body>
 </html>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script>
-    var chageurl = document.getElementsByClassName('changeurl')[0];
-    var lis = document.getElementsByTagName('li');
+    var chageurl = document.getElementsByClassName('chageurl')[0];
+    var lis = chageurl.getElementsByTagName('li');
     for(var i = 0;i < lis.length-1;i++){
         lis[i].onclick = function(){
+            for(var j = 0;j < lis.length-1;j++){
+                lis[j].className = "";
+            }
             // console.log($(this).attr("data-url"));
             iframe.src = $(this).attr("data-url");
+            this.className = "active";
         }
     }
 </script>
