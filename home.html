@@ -5,8 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+    <div class="muse">
+        <nav>
+            <span class="iconsvg lefticon"></span>
+            <ul class="chageurl">
+                <li data-url="./components/index.html">主页</li>
+                <li data-url="./components/line.html">线索</li>
+                <li data-url="./components/contacts.html">联系人</li>
+                <li data-url="./components/customer.html">客户</li>
+                <li data-url="./components/transaction.html">交易</li>
+                <li data-url="./components/task.html">任务、通话及活动</li>
+                <li data-url="./components/form.html">报表</li>
+                <li data-url="./components/anslysis.html">数据分析</li>
+                <li><i class="more"></i></li>
+            </ul>
+        </nav>
+    </div>
     
+    <iframe src="./components/index.html" frameborder="0" id="iframe"></iframe>
+    <div class="footer">
+        <div class="leftbox">
+            <span class="lt"></span>
+            <span class="lxr"></span>
+        </div>
+        
+    </div>
 </body>
 </html>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+    var chageurl = document.getElementsByClassName('changeurl')[0];
+    var lis = document.getElementsByTagName('li');
+    for(var i = 0;i < lis.length-1;i++){
+        lis[i].onclick = function(){
+            // console.log($(this).attr("data-url"));
+            iframe.src = $(this).attr("data-url");
+        }
+    }
+</script>
