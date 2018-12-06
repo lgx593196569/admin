@@ -1,23 +1,37 @@
-var rybNavOne = document.getElementById("rybNavOne");
+var rybNavOffOn = document.getElementById("rybNavOne");
+var rybBoxShadowMask = document.getElementById("rybBoxShadowMask");
+var rybTopNavDaoru = document.getElementById("rybTopNavDaoru");
 var rybBoxShadowContain = document.getElementById("rybBoxShadowContain");
-var rybNavOffOn = true;
-function test() {
-    console.log(1);
-    if (rybNavOffOn) {
-        rybNavOne.addEventListener("click", test1, true);
-    } else {
-        test1();
-    }
-}
-function test1() {
-    if (rybNavOffOn) {
-        rybBoxShadowContain.style.cssText = "display:block;";
-        rybNavOffOn = false;
-        rybNavOne.removeEventListener("click", test1, true);
-    } else {
-        rybNavOffOn = true;
+var rybclick = document.getElementById("rybclick");
+var rybbian = document.getElementById("rybbian");
+var off = true;
+document.onclick = function (evt) {
+    var event = evt || window.event;
+    console.log(event);
+    var a = event.target || event.srcElement;
+    if (a.id == "rybclick") {
+        rybbian.style.cssText = "display:block;";
+        rybBoxShadowMask.style.cssText = "display:none;";
         rybBoxShadowContain.style.cssText = "display:none;";
-        document.removeEventListener("click", test1, true);
+    } else if (a.id == "rybNavOne") {
+        if (off) {
+            off = false;
+            rybBoxShadowContain.style.cssText = "display:block;";
+            rybbian.style.cssText = "display:none;";
+            rybBoxShadowMask.style.cssText = "display:none;";
+        } else {
+            rybbian.style.cssText = "display:none;";
+            rybBoxShadowMask.style.cssText = "display:none;";
+            rybBoxShadowContain.style.cssText = "display:none;";
+            off = true;
+        }
+    } else if (a.id == "rybTopNavDaoru") {
+        rybBoxShadowMask.style.cssText = "display:block;";
+        rybbian.style.cssText = "display:none;";
+        rybBoxShadowContain.style.cssText = "display:none;";
+    } else {
+        rybbian.style.cssText = "display:none;";
+        rybBoxShadowMask.style.cssText = "display:none;";
+        rybBoxShadowContain.style.cssText = "display:none;";
     }
 }
-document.addEventListener("click", test, true);

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/customer.css">
+    <link rel="stylesheet" href="../css/transaction.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -14,7 +14,7 @@
     <div class="ryb_box">
         <div class="ryb_box_top_nav">
             <div class="ryb_top_nav_left">
-                <span class="ryb_top_nav_left_one" id="rybNavOne">所有客户<i></i></span>
+                <span class="ryb_top_nav_left_one" id="rybNavOne">所有交易<i></i></span>
                 <div class="ryb_floatL">
                     <span class="ryb_smalledit">编辑</span>
                     <span class='ryb_nav_img'></span>
@@ -25,22 +25,28 @@
                     </span>
                     <ul>
                         <a href="#">
-                            <li><i></i>所有客户</li>
+                            <li><i></i>所有交易</li>
                         </a>
                         <a href="#">
-                            <li><i></i>我的客户</li>
+                            <li><i></i>下月关闭</li>
+                        </a>
+                        <a href="#">
+                            <li><i></i>本月关闭</li>
+                        </a>
+                        <a href="#">
+                            <li><i></i>我的交易</li>
                         </a>
                         <a href="#">
                             <li><i></i>上周新建</li>
                         </a>
                         <a href="#">
-                            <li><i></i>本周新建</li>
+                            <li><i></i>上周新建</li>
                         </a>
                         <a href="#">
-                            <li><i></i>最近创建的客户</li>
+                            <li><i></i>最近创建的交易</li>
                         </a>
                         <a href="#">
-                            <li><i></i>最近修改的客户</li>
+                            <li><i></i>最近修改的交易</li>
                         </a>
                         <a href="#">
                             <li><i></i>未读的客户</li>
@@ -55,12 +61,46 @@
                 <span class="rybTopNavRight_img3 img"></span>
                 <span class="rybTopNavRight_daoru" style="margin-left:20px;">
                     <button></button>
-                    <input type="button" value="导入" class='newwhitebtn'>
+                    <input type="button" value="导入" class='newwhitebtn' id="rybTopNavDaoru">
+                    <div class="ryb_boxShadowMask" id="rybBoxShadowMask">
+                        <ul>
+                            <li><a href="#">导入交易</a></li>
+                            <li><a href="#">导入备注</a></li>
+                        </ul>
+                    </div>
                 </span>
                 <span class="rybTopNavRight_sandian" style="margin-left:20px;">
-                    <a href="#"></a>
+                    <a href="#" id="rybclick"></a>
+                    <div id="rybbian">
+                        <ul>
+                            <li style="margin-top:10px;" class="xuan">
+                                批量删除
+                            </li>
+                            <li class="xuan">
+                                批量更新
+                            </li>
+                            <li class="xuan">
+                                管理标签
+                            </li>
+                            <li class="xuan">
+                                群发邮件
+                            </li>
+                            <li class="gang">
+
+                            </li>
+                            <li class="xuan">
+                                Zoho Sheet视图
+                            </li>
+                            <li class="xuan">
+                                打印预览
+                            </li>
+                        </ul>
+                    </div>
                 </span>
             </div>
+        </div>
+        <div class="">
+
         </div>
     </div>
 </body>
