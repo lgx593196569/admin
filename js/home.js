@@ -16,7 +16,9 @@ for(var i = 0;i < lis.length-1;i++){
 iconsvg.onclick = function(){
     if(xx){
         $(".biaoqian").show();
+        $(".addmd").hide();
         xx = false;
+        zz = true;
     }else{
         $(".biaoqian").hide();
         xx = true;
@@ -25,6 +27,8 @@ iconsvg.onclick = function(){
 more.onclick = function(){
     if(zz){
         $(".addmd").show();
+        $(".biaoqian").hide();
+        xx = true;
         zz = false;
     }else{
         $(".addmd").hide();
@@ -73,4 +77,20 @@ $(".zuijin").on("click",function(){
         this.style.backgroundPosition = '-220px -3px';
         zj = true;
     }
+})
+$(".sousuo").on("click",function(){
+    $(".banben").hide();
+    $(".addmd").hide();
+    $(".biaoqian").hide();
+    $(this).hide();
+    $(".tianjia").css("margin-left",'24px');
+    $(".kuang").show();
+    xx = true;
+    zz = true;
+})
+$(".close").on("click",function(){
+    $(".sousuo").show();
+    $(".banben").show();
+    $(".kuang").hide();
+    $(".tianjia").css("margin-left",'0');
 })

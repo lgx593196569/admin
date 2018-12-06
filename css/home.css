@@ -16,6 +16,7 @@
     position: absolute;
     top: 20px!important;
     left: 8px;
+    cursor: pointer;
 }
 .active{
     background:rgba(255, 255, 255, .2);
@@ -238,6 +239,43 @@
    position: relative;
    line-height: 52px;
 }
+.usericon .kuang{
+    width: 256px;
+    height: 28px;
+    background: white;
+    position: absolute;
+    top: 13px;
+    right: 185px;
+    border-radius: 15px;
+    display: none;
+}
+.usericon .kuang input{
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    height: 20px;
+    width: 200px;
+    border: none;
+}
+.ss{
+    background: url(../images/icon.svg) no-repeat;
+    background-position:  0 0!important;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 3px;
+}
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 11px;
+    height: 11px;
+    background: url(../images/icon.svg) no-repeat -275px -1640px;
+}
 .usericon a{
     background: url(../images/icon.svg) no-repeat;
     height: 52px;
@@ -246,19 +284,19 @@
 .usericon a:hover{
     opacity: 1;
 }
-.usericon a:nth-child(1){
+.usericon .sousuo{
     background-position: -147px -66px!important;
     width: 19px;
     height: 19px;
     display: inline-block;
 }
-.usericon a:nth-child(2){
+.usericon .tianjia{
     background-position: -180px -66px!important;
     width: 18px;
     height: 18px;
     display: inline-block;
 }
-.usericon a:nth-child(3){
+.usericon .rili{
     margin-left: 10px;
     margin-top: 2px;
     background-position: -244px -66px!important;
@@ -266,7 +304,7 @@
     height: 20px;
     display: inline-block;
 }
-.usericon a:nth-child(4){
+.usericon .setting{
     background-position: -275px -67px;
     width: 22px;
     height: 21px;
