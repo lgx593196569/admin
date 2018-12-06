@@ -30,6 +30,7 @@ document.onclick = function (evt) {
         rybbian.style.cssText = "display:none;";
         rybBoxShadowContain.style.cssText = "display:none;";
     } else {
+        off = true;
         rybbian.style.cssText = "display:none;";
         rybBoxShadowMask.style.cssText = "display:none;";
         rybBoxShadowContain.style.cssText = "display:none;";
