@@ -83,6 +83,7 @@
     padding-left: 35px;
     width: 55%;
     height: 52px;
+    float: left;
 }
 .chageurl li{
     float: left;
@@ -93,7 +94,7 @@
     cursor: pointer;
     text-align: center;
 }
-.chageurl li:nth-child(1),li:nth-child(2),li:nth-child(4),li:nth-child(5),li:nth-child(7){
+.chageurl li:nth-child(1),.chageurl li:nth-child(2),.chageurl li:nth-child(4),.chageurl li:nth-child(5),.chageurl li:nth-child(7){
     width: 56.81px;
 }
 .chageurl li:nth-child(3){
@@ -118,11 +119,177 @@
     opacity: .8;
     vertical-align: middle;
 }
+.addmd{
+    width: 250px;
+    height: 160px;
+    background: white;
+    position: absolute;
+    top: 52px;
+    left: 640px;
+    display: none;
+}
+.addmd .jiantou{
+    box-shadow: -1px -1px 0 0 #d6d6d6;
+    top: -6px;
+    left: 17px;;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    background: #fff;
+    transform: rotate(45deg);
+}
+.addmoudle{
+    padding-top: 10px;
+}
+.addmoudle span{
+    padding: 10px 23px;
+    display: inline-block;
+    
+}
+.addmoudle .addicon{
+    display:inline-block;
+    width: 11px;
+    height: 11px;
+    background: url(../images/icon.svg) no-repeat 0 -671px;;
+}
+.addmoudle span a{
+    padding-left: 5px;
+    color: #2C7BD0;
+}
+.jianyi{
+    background:#f5f5f5;
+    border-top: 1px solid #eaeaea;
+    height: 110px;
+}
+.jianyi span{
+    font-size: 12px;
+    padding: 0 23px;
+    color: #666;
+    display: block;
+    height: 35px;
+    line-height: 40px;
+}
+.jianyi ul li{
+    padding: 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+}
+.jianyi ul li a{
+    padding:  0 23px;
+}
+.jianyi ul li:hover{
+    background: #eaeaea;
+}
+.jianyi ul li:hover i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 11px;
+    height: 11px;
+    background: url(../images/icon.svg) no-repeat -275px -1640px;
+}
 .user{
-
+    width: 43%;
+    
+    position: relative;
+}
+.ab{
+    position: absolute;
+    right: 0;
+    top:0;
+}
+.user .banben{
+    width: 80px;
+    height: 42px;
+    text-align: right;
+    position: relative;
+    float: left;
+}
+.user .banben span{
+    color: #ccc;
+    font-size: 12px;
+}
+.user .banben a{
+    font-size: 12px;
+    color: #208aed;
+}
+.shu{
+    border-right: 2px solid #5f646e;
+    position: absolute;
+    height: 25px;
+    right: -8px;
+    top: 11px;
+    width: 0;
+}
+.usericon{
+   width: 201px;
+   height: 52px;
+   float: left; 
+   margin-left: 20px;
+   position: relative;
+   line-height: 52px;
+}
+.usericon a{
+    background: url(../images/icon.svg) no-repeat;
+    height: 52px;
+    opacity: .8;
+}
+.usericon a:hover{
+    opacity: 1;
+}
+.usericon a:nth-child(1){
+    background-position: -147px -66px!important;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+}
+.usericon a:nth-child(2){
+    background-position: -180px -66px!important;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+.usericon a:nth-child(3){
+    margin-left: 10px;
+    margin-top: 2px;
+    background-position: -244px -66px!important;
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+}
+.usericon a:nth-child(4){
+    background-position: -275px -67px;
+    width: 22px;
+    height: 21px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.usericon div{
+    width: 33px;
+    height: 33px;
+    float: left;
+}
+.usericon img{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
 }
 #iframe{
-    width: 1920px;
+    width: 100%;
     height: 800px;
     overflow:scroll;
 }

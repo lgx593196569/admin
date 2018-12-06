@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="muse">
-        <nav>
+        <nav style="position:relative;display: flex;justify-content:space-between;">
             <div>
                 <span class="iconsvg lefticon"></span>
                 <div class="biaoqian">
@@ -29,9 +29,8 @@
                 </div>
             </div>
             
-            
             <div id="chageurl">
-                <ul class="chageurl">
+                <ul class="chageurl" style="display: flex;justify-content:space-start;">
                     <li data-url="./components/index.html" class="active">主页</li>
                     <li data-url="./components/line.html">线索</li>
                     <li data-url="./components/contacts.html">联系人</li>
@@ -40,17 +39,44 @@
                     <li data-url="./components/task.html">任务、通话及活动</li>
                     <li data-url="./components/form.html">报表</li>
                     <li data-url="./components/anslysis.html">数据分析</li>
-                    <li><i class="more"></i></li>
+                    <li><i class="more" id="more"></i></li>
                 </ul>
+                <div class="addmd">
+                    <div style="position:absolute;">
+                        <i class="jiantou"></i>
+                    </div>
+                    <div class="addmoudle">
+                        <span><i class="addicon"></i><a href="javascript:;">创建新模块</a></span>
+                    </div>
+                    <div class="jianyi">
+                        <span>建议的应用程序</span>
+                        <ul>
+                            <li><a href="javascript:;">Zoho Desk</a><i></i></li>
+                            <li><a href="javascript:;">Zoho Projects</a><i></i></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="user">
-
+                <div class="ab">
+                    <div class="banben">
+                        <span>试用-旗舰版</span>
+                        <a href="javascript:;">升级</a>
+                        <div class="shu"></div>
+                    </div>
+                    <div class="usericon">
+                        <a href="javascript:;" class="sousuo"></a>
+                        <a href="javascript:;" class="tianjia"></a>
+                        <a href="javascript:;" class="rili"></a>
+                        <a href="javascript:;" class="setting"></a>
+                        <img src="images/image.jpg">
+                    </div>
+                </div> 
             </div>
-            
         </nav>
     </div>
     
-    <iframe src="./components/line.html" frameborder="0" id="iframe"></iframe>
+    <iframe src="./components/index.html" frameborder="0" id="iframe"></iframe>
     <div class="footer">
         <div class="leftbox">
             <span class="lt icon iconfont icon-weixin" title="聊天"></span>
@@ -61,38 +87,14 @@
         </div>
         <div class="rightbox">
             <ul>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
+                <li><span class="bianqian"></span></li>
+                <li><span class="zia"></span></li>
+                <li><span class="huodong"></span></li>
+                <li><span class="zuijin"></span></li>
             </ul>    
         </div>
     </div>
 </body>
 </html>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script>
-    var chageurl = document.getElementsByClassName('chageurl')[0];
-    var iconsvg = document.getElementsByClassName('iconsvg')[0];
-    var lis = chageurl.getElementsByTagName('li');
-    var xx = true;
-    for(var i = 0;i < lis.length-1;i++){
-        lis[i].onclick = function(){
-            for(var j = 0;j < lis.length-1;j++){
-                lis[j].className = "";
-            }
-            // console.log($(this).attr("data-url"));
-            iframe.src = $(this).attr("data-url");
-            this.className = "active";
-        }
-    }
-    iconsvg.onclick = function(){
-        if(xx){
-            $(".biaoqian").show();
-            xx = false;
-        }else{
-            $(".biaoqian").hide();
-            xx = true;
-        }
-    }
-</script>
+<script src="js/home.js"></script>
