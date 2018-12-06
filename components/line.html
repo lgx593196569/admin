@@ -1,12 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/line.css">
 </head>
+
 <body>
-    
+    <div class="h_conter">
+        <div class="h_nav h_nav_top">
+            <div class="h_p16 h_box_h">
+                <div class="fl pr h_nav_left">
+                    <div class="h_box">
+                        所有未关闭的线索
+                        <i class="h_icon"></i>
+                    </div>
+                    <div class="h_icons">
+                        <a href="javascript:;">编辑</a>
+                        <span class="date"></span>
+                        <img src="../images/spacer.gif" alt="">
+                    </div>
+                </div>
+                <div class="h_nav_right fr pr">
+                    <div class="pr dib mr30 ml30">
+                        <a href="javascript:;" class="svgIconsImg listctive mL10"></a>
+                        <a href="javascript:;" class="svgIconsImg taskctive mL10"></a>
+                        <a href="javascript:;" class="svgIconsImg cveditIcon mL10"></a>
+                    </div>
+                    <span class="custCon pr">
+                        <button class="newbtn custBtn ">新建</button>
+                        <span>
+                            <input type="button" class="newwhitebtn customImportBtn" value="导入" id="stage">
+                            <div class="h_list h_lists">
+                                <div class="boxShadowMask padAndBg">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;" class="link">导入线索</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="link">导入备注</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="normalDropDown pr mr30" style="margin-top:-6px;">
+                        <a href="javascript:;" class="moredotparentBtn mr0 newwhitebtn " id="cv_tools">
+                            <span class="moredot"></span>
+                        </a>
+                        <div class="h_list" id="toolsId">
+                            <div class="boxShadowMask padAndBgc" style="display:block;">
+                                <ul class="oUl">
+                                    <li>
+                                        <a href="javascript:;">批量删除</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">批量更新 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">批量转换</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">管理标签</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">群发邮件</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">自动应答</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">审批线索</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">重复的线索记录</a>
+                                    </li>
+                                    <li class="menu_sep"></li>
+                                    <li>
+                                        <a href="javascript:;">Zoho Sheet视图</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">打印预览</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="optionsHolder" class="pa pt0 option">
+        <div class="boxShadowContain boxShadowMask">
+            <div class="searchBox pr" id="SearchBox">
+                <input type="text">
+            </div>
+            <div class="pr ps-themec">
+                <div>
+                    <span class="cbTitle">分享给我的</span>
+                    <ul>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">所有未关闭的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">已转换的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">垃圾线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">邮件标签</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">我的已修改线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">我的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">不合格的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">打开线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">最近创建的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">最近修改的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">今日线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">未读的线索</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w100 cbCreateView">
+                <a href="javascript:;" class="cp pl30 ptb6 db createlink"><span></span>新建视图</a>
+            </div>
+        </div>
+    </div>
+    <div class="content_d pt0 bt0">
+        <div class="leftBar fl pr left_filter">
+            <form>
+                <div class="custom fl pr">
+                    <div class="head_top mb5 pl15 pr20 h35">
+                        <div class="mt12">
+                            <span class="fl mw188 dib defaultcursor">过滤线索通过</span>
+                            <span class="searchIcon dib fr op05 cp"></span>
+                        </div>
+                        <div class="pr fl" id="filter" style="margin-bottom:-1px;display:none">
+                            <span class="setupsearchicon ico-search svgIcons" style="left:1px;"></span>
+                            <input type="text" class="setupsearch" placeholder="搜索" value="">
+                            <a href="javascript:;" class="fr f10 clear svgIcons ico-close ml5 cp mt10" id="search_clear"
+                                style="display:none;"></a>
+                        </div>
+                    </div>
+                    <div class=""></div>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="../js/line.js"></script>
