@@ -17,6 +17,8 @@ iconsvg.onclick = function(){
     if(xx){
         $(".biaoqian").show();
         $(".addmd").hide();
+        $(".add").hide();
+        adds = true;
         xx = false;
         zz = true;
     }else{
@@ -28,6 +30,8 @@ more.onclick = function(){
     if(zz){
         $(".addmd").show();
         $(".biaoqian").hide();
+        $(".add").show();
+        adds = true;
         xx = true;
         zz = false;
     }else{
@@ -85,12 +89,28 @@ $(".sousuo").on("click",function(){
     $(this).hide();
     $(".tianjia").css("margin-left",'24px');
     $(".kuang").show();
+    $(".add").hide();
     xx = true;
     zz = true;
+    adds = true;
 })
 $(".close").on("click",function(){
     $(".sousuo").show();
     $(".banben").show();
     $(".kuang").hide();
     $(".tianjia").css("margin-left",'0');
+})
+var adds = true;
+$(".tianjia").on("click",function(){
+    if(adds){
+        $(".add").show();
+        $(".biaoqian").hide();
+        $(".addmd").hide();
+        xx = true;
+        zz = true;
+        adds = false;
+    }else{
+        $(".add").hide(); 
+        adds = true;
+    }
 })

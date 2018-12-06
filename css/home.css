@@ -281,6 +281,45 @@
     height: 52px;
     opacity: .8;
 }
+.usericon .add{
+    width: 96px;
+    height: auto;
+    font-size: 13px;
+    position: absolute;
+    top: 52px;
+    background: white;
+    left: 23px;
+    display:none;
+}
+.usericon .add ul li{
+    width: 96px;
+    height: 28px;
+    line-height: 28px;
+    z-index: 3;
+}
+.usericon .add ul li:hover{
+    background: #ccc;
+}
+.usericon .add ul li span{
+    text-align: left;
+    margin-right: 5px;
+    padding-left:18px;
+}
+.add .jiantou{
+    box-shadow: -1px -1px 0 0 #d6d6d6;
+    top: -6px;
+    left: 2px;;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    background: #fff;
+    transform: rotate(45deg);
+    z-index: 1;
+}
 .usericon a:hover{
     opacity: 1;
 }
