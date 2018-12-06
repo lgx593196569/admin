@@ -540,3 +540,15 @@ a.createlink span{
     top: 4px;
     margin: 10px 0 0;
 }
+.container{
+    touch-action: none;
+    overflow: hidden!important;
+}
+#scroll_d{
+    width: 250px;
+    max-width: 250px;
+}
+
+.cb {
+    clear: both;
+}
