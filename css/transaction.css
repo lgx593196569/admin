@@ -1,4 +1,8 @@
 /* 顶部开始 */
+body,html{
+    width: 100%;
+    height: 100%:
+}
 .ryb_box{
     width: 100%;
     height: 100%;
@@ -66,6 +70,7 @@
 }
 .ryb_box .ryb_box_top_nav .ryb_top_nav_left .ryb_boxShadowContain ul{
     margin-bottom: 4px;
+    z-index: 10;
 }
 .ryb_box .ryb_box_top_nav .ryb_top_nav_left .ryb_boxShadowContain ul li{
     height: 30px;
@@ -198,6 +203,7 @@
     height: 100%;
     display: inline-block;
     content: "";
+    /* z-index: 10; */
     background-color: #fff;
 }
 .ryb_box .ryb_box_top_nav .ryb_top_nav_right .rybTopNavRight_daoru .ryb_boxShadowMask{
@@ -209,6 +215,7 @@
     top: 30px;
     left: -3px;
     display: none;
+    z-index: 10;
 }
 .ryb_box .ryb_box_top_nav .ryb_top_nav_right .rybTopNavRight_daoru .ryb_boxShadowMask ul li{
     height: 30px;
@@ -233,6 +240,7 @@
     background-color: #fff;
     box-shadow: 0 1px 16px rgba(0,0,0,0.3);
     display: none;
+    z-index: 10;
 }
 .ryb_box .ryb_box_top_nav .ryb_top_nav_right .rybTopNavRight_sandian div ul li{
     width: 100%;
@@ -255,3 +263,143 @@
     background-color: #eee;
 }
 /* 顶部结束 */
+
+.ryb_box .ryb_content{
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    overflow: hidden;
+    height: inherit!important;
+    background-color: #FFf;
+}
+.ryb_box .ryb_content .ryb_searchIcon{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.ryb_box .ryb_content .ryb_searchIcon span{
+    color: #9197a3;
+    font-size:12.9702px;
+    display: block;
+    margin-left: 20px;
+}
+.ryb_box .ryb_content .ryb_contentForm{
+    width: 250px;
+    border-right: 1px solid #eee;
+    cursor: pointer;
+    position: relative;
+}
+.ryb_box .ryb_content .ryb_searchIcon i{
+    background: url(../images/icon.svg);
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-right: 20px;
+}
+.ryb_box .ryb_content .ryb_contentForm ul{
+    height: 670px;
+    overflow: auto;
+    cursor: pointer;
+}
+.ryb_box .ryb_content .ryb_contentForm ul li{
+    height: 29px;
+    width: 80%;
+    margin-left: 20px;
+    overflow: hidden;
+    transition: all .3s;
+}
+.ryb_box .ryb_content .ryb_contentForm ul li label{
+    color: #333;
+    font-size:12.3032px;
+}
+.ryb_box .ryb_content .ryb_contentForm ul li .ryb_facet{
+    width: 80%;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size:12px;
+    color:rgb(51, 51, 51);
+}
+.ryb_box .ryb_content .ryb_contentForm ul li .ryb_facet select{
+    padding: 0 4px;
+    font-size: 12px;
+    height: 17px;
+    line-height: 17px;
+    width: 50%;
+    background-color: #F1F1F1;
+    text-shadow: 0 0 0 #000;
+    /* margin: 0; */
+    display: inline-block;
+    -webkit-appearance: none;
+    border-radius:0px; 
+    cursor: pointer;
+    border: 1px solid #D5D5D5;
+    color: #333;
+    margin-left: 3px;
+}
+.ryb_box .ryb_content .ryb_contentForm ul li .ryb_facet input{
+    border: none;
+    border-bottom: 1px solid #DFDFDF!important;
+    border-radius: 0;
+    padding-bottom: 3px;
+    outline: none;
+    padding: 8px 8px 7px;
+    font-size: 13px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+.ryb_box .ryb_content .ryb_contentForm ul li .ryb_facet input:hover{
+    border-bottom: 1px #aaa solid!important;
+}
+.List_bottom{
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+.List_bottom input{
+    width: 20%;
+    height: 17px!important;
+    padding: 0!important;
+    text-indent: 3px;
+    border: 1px solid #D5D5D5 !important;
+    margin-left: 3px;
+}
+.List_bottom select.time{
+    width: 20%!important;
+}
+.ryb_facet .radiobox{
+    display: block!important;
+    width: 100%;
+    height: 20px;
+}
+.ryb_facet .radiobox input{
+    margin-right: 5px;
+}
+.ryb_lv_filter_options{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 10px;
+    display: none;
+}
+.ryb_lv_filter_options input{
+    color: white!important;
+    background-color: #42a2eb!important;
+    border: solid 1px #42a2eb!important;
+    border-radius: 2px;
+    font-size: 12.9735px;
+    padding: .35rem 1.071rem;
+    margin-right: 8px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.ryb_lv_filter_options a{
+    color: #2C7BD0;
+    outline: none medium;
+    text-decoration: none;
+    font-size: 13px;
+}

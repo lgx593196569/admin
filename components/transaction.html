@@ -49,7 +49,7 @@
                             <li><i></i>最近修改的交易</li>
                         </a>
                         <a href="#">
-                            <li><i></i>未读的客户</li>
+                            <li><i></i>未读的交易</li>
                         </a>
                     </ul>
                     <span class='ryb_boxShadowContain_bottom'>+新建视图</span>
@@ -99,8 +99,603 @@
                 </span>
             </div>
         </div>
+        <div class="ryb_content">
+            <div class="ryb_contentForm" id="rybContentForm">
+                <div class="ryb_searchIcon">
+                    <span>过滤交易通过</span>
+                    <i></i>
+                </div>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="checkbox1">
+                        <label for="checkbox1">
+                            受影响的记录
+                        </label>
+                        <div class="ryb_facet" style="height:40px;">
+                            通过<select name="" id="">
+                                <option value="">用户和系统</option>
+                                <option value="">用户或系统</option>
+                                <option value="">用户</option>
+                                <option value="">系统</option>
+                                <option value="">仅用户</option>
+                                <option value="">仅系统</option>
+                            </select>
+                            <div class="List_bottom">
+                                <select name="" id="" class="active">
+                                    <option value="">在最近</option>
+                                    <option value="">今天</option>
+                                    <option value="">本周</option>
+                                    <option value="">本月</option>
+                                    <option value="">今年</option>
+                                    <option value="">在过去30天</option>
+                                    <option value="">在过去60天</option>
+                                    <option value="">在过去90天</option>
+                                    <option value="">再到现在</option>
+                                </select>
+                                <input type="text" value="2">
+                                <select name="" id="" class="time">
+                                    <option value="">天</option>
+                                    <option value="">周</option>
+                                    <option value="">月</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox2">
+                        <label for="checkbox2">未受影响的记录 </label>
+                        <div class="ryb_facet" style="height:40px;">
+                            通过<select name="" id="">
+                                <option value="">用户和系统</option>
+                                <option value="">用户或系统</option>
+                                <option value="">用户</option>
+                                <option value="">系统</option>
+                                <option value="">仅用户</option>
+                                <option value="">仅系统</option>
+                            </select>
+                            <div class="List_bottom">
+                                <select name="" id="" class="active">
+                                    <option value="">在最近</option>
+                                    <option value="">今天</option>
+                                    <option value="">本周</option>
+                                    <option value="">本月</option>
+                                    <option value="">今年</option>
+                                    <option value="">在过去30天</option>
+                                    <option value="">在过去60天</option>
+                                    <option value="">在过去90天</option>
+                                    <option value="">再到现在</option>
+                                </select>
+                                <input type="text" value="2">
+                                <select name="" id="" class="time">
+                                    <option value="">天</option>
+                                    <option value="">周</option>
+                                    <option value="">月</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox3">
+                        <label for="checkbox3">记录操作 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="" style="display:block;margin-bottom: 4px;">
+                                <option value="">已修改</option>
+                                <option value="">未修改</option>
+                            </select>
+                            通过<select name="" id="">
+                                <option value="">用户和系统</option>
+                                <option value="">用户或系统</option>
+                                <option value="">用户</option>
+                                <option value="">系统</option>
+                                <option value="">仅用户</option>
+                                <option value="">仅系统</option>
+                            </select>
+                            <div class="List_bottom">
+                                <select name="" id="" class="active">
+                                    <option value="">在最近</option>
+                                    <option value="">今天</option>
+                                    <option value="">本周</option>
+                                    <option value="">本月</option>
+                                    <option value="">今年</option>
+                                    <option value="">在过去30天</option>
+                                    <option value="">在过去60天</option>
+                                    <option value="">在过去90天</option>
+                                    <option value="">再到现在</option>
+                                </select>
+                                <input type="text" value="2">
+                                <select name="" id="" class="time">
+                                    <option value="">天</option>
+                                    <option value="">周</option>
+                                    <option value="">月</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox4">
+                        <label for="checkbox4">相关的操作记录 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="" style="display:block;margin-bottom: 4px;">
+                                <option value="">完成</option>
+                                <option value="">尚未完成</option>
+                            </select>
+                            通过<select name="" id="">
+                                <option value="">用户和系统</option>
+                                <option value="">用户或系统</option>
+                                <option value="">用户</option>
+                                <option value="">系统</option>
+                                <option value="">仅用户</option>
+                                <option value="">仅系统</option>
+                            </select>
+                            <div class="List_bottom">
+                                <select name="" id="" class="active">
+                                    <option value="">在最近</option>
+                                    <option value="">今天</option>
+                                    <option value="">本周</option>
+                                    <option value="">本月</option>
+                                    <option value="">今年</option>
+                                    <option value="">在过去30天</option>
+                                    <option value="">在过去60天</option>
+                                    <option value="">在过去90天</option>
+                                    <option value="">再到现在</option>
+                                </select>
+                                <input type="text" value="2">
+                                <select name="" id="" class="time">
+                                    <option value="">天</option>
+                                    <option value="">周</option>
+                                    <option value="">月</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox5">
+                        <label for="checkbox5">邮件状态 </label>
+                        <div class="ryb_facet" style="height:140px;">
+                            <div class="List_bottom" style="margin-left:-3px;">
+                                <select name="" id="" class="active">
+                                    <option value="">在最近</option>
+                                    <option value="">今天</option>
+                                    <option value="">本周</option>
+                                    <option value="">本月</option>
+                                    <option value="">今年</option>
+                                    <option value="">在过去30天</option>
+                                    <option value="">在过去60天</option>
+                                    <option value="">在过去90天</option>
+                                    <option value="">再到现在</option>
+                                </select>
+                                <input type="text" value="2">
+                                <select name="" id="" class="time">
+                                    <option value="">天</option>
+                                    <option value="">周</option>
+                                    <option value="">月</option>
+                                </select>
+                            </div>
+                            并且状态是<br>
+                            <span class="radiobox">
+                                <label for="radio1">
+                                    <input name="Fruit" type="radio" id="radio1" value="" />已打开</label>
+                            </span>
+                            <span class="radiobox">
+                                <label for="radio2"><input name="Fruit" type="radio" id="radio2" value="" />未打开 </label>
+                            </span>
+                            <span class="radiobox">
+                                <label for="radio3"><input name="Fruit" id="radio3" type="radio" value="" />已退出 </label>
+                            </span>
+                            <span class="radiobox">
+                                <label for="radio4"><input name="Fruit" id="radio4" type="radio" value="" />已打开并且回复
+                                </label>
+                            </span>
+                            <span class="radiobox">
+                                <label for="radio5"><input name="Fruit" id="radio5" type="radio" value="" checked />以上任意
+                                </label>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox6">
+                        <label for="checkbox6">任务、通话及活动 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox7">
+                        <label for="checkbox7">备注 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox8">
+                        <label for="checkbox8">交易名称 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox9">
+                        <label for="checkbox9">金额 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox10">
+                        <label for="checkbox10">
+                            阶段
+                        </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox11">
+                        <label for="checkbox11">预计成交日期 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox12">
+                        <label for="checkbox12">客户名称 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox13">
+                        <label for="checkbox13">联系人名称 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox14">
+                        <label for="checkbox14">交易所有者 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox15">
+                        <label for="checkbox15">下一步 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox16">
+                        <label for="checkbox16">修改时间 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox17">
+                        <label for="checkbox17">修改者 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox18">
+                        <label for="checkbox18">创建时间 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox19">
+                        <label for="checkbox19">创建者 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox20">
+                        <label for="checkbox20">可能性 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox21">
+                        <label for="checkbox21">总销售时间 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox22">
+                        <label for="checkbox22">最近操作日期 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox23">
+                        <label for="checkbox23">标签 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox24">
+                        <label for="checkbox24">类型 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox25">
+                        <label for="checkbox25">线索来源 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox26">
+                        <label for="checkbox26">线索转换时间 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox27">
+                        <label for="checkbox27">销售周期的持续时间 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox28">
+                        <label for="checkbox28">预期收益 </label>
+                        <div class="ryb_facet">
+                            <select name="" id="">
+                                <option value="">是</option>
+                                <option value="">不是</option>
+                                <option value="">包含</option>
+                                <option value="">不包含</option>
+                                <option value="">开始字符</option>
+                                <option value="">结束字符</option>
+                                <option value="">为空</option>
+                                <option value="">不为空</option>
+                            </select>
+                            <input type="text" placeholder="在这里输入">
+                        </div>
+                    </li>
+                </ul>
+                <div class="ryb_lv_filter_options">
+                    <input type="button" value="应用过滤器">
+                    <a href="#">清空</a>
+                </div>
+            </div>
+            <div class="ryb_contentList"></div>
+        </div>
     </div>
 </body>
 
 </html>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="../js/transaction.js"></script>
