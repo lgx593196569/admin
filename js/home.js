@@ -30,7 +30,7 @@ more.onclick = function(){
     if(zz){
         $(".addmd").show();
         $(".biaoqian").hide();
-        $(".add").show();
+        $(".add").hide();
         adds = true;
         xx = true;
         zz = false;
@@ -114,3 +114,12 @@ $(".tianjia").on("click",function(){
         adds = true;
     }
 })
+var _height = document.documentElement.clientHeight;
+// console.log(_height);
+window.onload = function () {
+    $("#iframe").css("height", _height* 0.8 + "px");
+}
+window.onresize = function () {
+    _height = document.documentElement.clientHeight;
+    $("#iframe").css("height", _height * 0.8 + "px");
+}
