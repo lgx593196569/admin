@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../css/line.css">
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
 </head>
 
 <body>
@@ -175,10 +178,627 @@
                                 style="display:none;"></a>
                         </div>
                     </div>
-                    <div class="cb container pr" id="scroll_d"></div>
+                    <div class="cb container pr" id="scroll_d">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check1">
+                                <label title="受影响的记录" for="check1">受影响的记录</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        通过
+                                        <select name="" id="">
+                                            <option value="0">用户和系统</option>
+                                            <option value="1">用户或系统</option>
+                                            <option value="2">用户</option>
+                                            <option value="3">系统</option>
+                                            <option value="4">仅用户</option>
+                                            <option value="5">仅系统</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull" style="margin-left: 27px;">
+                                        <select name="" id="">
+                                            <option value="0">在最近</option>
+                                            <option value="1">今天</option>
+                                            <option value="2">本周</option>
+                                            <option value="3">本月</option>
+                                            <option value="4">今年</option>
+                                            <option value="5">在过去30天</option>
+                                            <option value="6">在过去60天</option>
+                                            <option value="7">在过去90天</option>
+                                            <option value="8">直到现在</option>
+                                        </select>
+                                        <input type="text" class="text" value="2">
+                                        <select name="" id="">
+                                            <option value="0">天</option>
+                                            <option value="1">周</option>
+                                            <option value="2">月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check2">
+                                <label title="受影响的记录" for="check2">未受影响的记录</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        通过
+                                        <select name="" id="">
+                                            <option value="0">用户和系统</option>
+                                            <option value="1">用户或系统</option>
+                                            <option value="2">用户</option>
+                                            <option value="3">系统</option>
+                                            <option value="4">仅用户</option>
+                                            <option value="5">仅系统</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull" style="margin-left: 27px;">
+                                        <select name="" id="">
+                                            <option value="0">在最近</option>
+                                            <option value="1">今天</option>
+                                            <option value="2">本周</option>
+                                            <option value="3">本月</option>
+                                            <option value="4">今年</option>
+                                            <option value="5">在过去30天</option>
+                                            <option value="6">在过去60天</option>
+                                            <option value="7">在过去90天</option>
+                                            <option value="8">直到现在</option>
+                                        </select>
+                                        <input type="text" class="text" value="2">
+                                        <select name="" id="">
+                                            <option value="0">天</option>
+                                            <option value="1">周</option>
+                                            <option value="2">月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check3">
+                                <label title="受影响的记录" for="check3">记录操作</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">已修改</option>
+                                            <option value="1">未修改</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull">
+                                        通过
+                                        <select name="" id="">
+                                            <option value="0">用户和系统</option>
+                                            <option value="1">用户或系统</option>
+                                            <option value="2">用户</option>
+                                            <option value="3">系统</option>
+                                            <option value="4">仅用户</option>
+                                            <option value="5">仅系统</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull" style="margin-left: 27px;">
+                                        <select name="" id="">
+                                            <option value="0">在最近</option>
+                                            <option value="1">今天</option>
+                                            <option value="2">本周</option>
+                                            <option value="3">本月</option>
+                                            <option value="4">今年</option>
+                                            <option value="5">在过去30天</option>
+                                            <option value="6">在过去60天</option>
+                                            <option value="7">在过去90天</option>
+                                            <option value="8">直到现在</option>
+                                        </select>
+                                        <input type="text" class="text" value="2">
+                                        <select name="" id="">
+                                            <option value="0">天</option>
+                                            <option value="1">周</option>
+                                            <option value="2">月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check4">
+                                <label title="受影响的记录" for="check4">相关的操作记录</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">已完成</option>
+                                            <option value="1">未完成</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull">
+                                        通过
+                                        <select name="" id="">
+                                            <option value="0">用户和系统</option>
+                                            <option value="1">用户或系统</option>
+                                            <option value="2">用户</option>
+                                            <option value="3">系统</option>
+                                            <option value="4">仅用户</option>
+                                            <option value="5">仅系统</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull" style="margin-left: 27px;">
+                                        <select name="" id="">
+                                            <option value="0">在最近</option>
+                                            <option value="1">今天</option>
+                                            <option value="2">本周</option>
+                                            <option value="3">本月</option>
+                                            <option value="4">今年</option>
+                                            <option value="5">在过去30天</option>
+                                            <option value="6">在过去60天</option>
+                                            <option value="7">在过去90天</option>
+                                            <option value="8">直到现在</option>
+                                        </select>
+                                        <input type="text" class="text" value="2">
+                                        <select name="" id="">
+                                            <option value="0">天</option>
+                                            <option value="1">周</option>
+                                            <option value="2">月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check5">
+                                <label title="受影响的记录" for="check5">邮件状态</label>
+                                <div class="down">
+                                    <div class="pull" style="margin-left: 67px;margin-top: -34px;">
+                                        <select name="" id="">
+                                            <option value="0">已发送</option>
+                                            <option value="1">未发送</option>
+                                            <option value="2">已打开</option>
+                                            <option value="3">未打开</option>
+                                            <option value="4">已接收</option>
+                                            <option value="5">未接收</option>
+                                            <option value="6">已退信</option>
+                                            <option value="7">已打开并且未回复</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">在最近</option>
+                                            <option value="1">今天</option>
+                                            <option value="2">本周</option>
+                                            <option value="3">本月</option>
+                                            <option value="4">今年</option>
+                                            <option value="5">在过去30天</option>
+                                            <option value="6">在过去60天</option>
+                                            <option value="7">在过去90天</option>
+                                            <option value="8">直到现在</option>
+                                        </select>
+                                        <input type="text" class="text" value="2">
+                                        <select name="" id="">
+                                            <option value="0">天</option>
+                                            <option value="1">周</option>
+                                            <option value="2">月</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull">并且状态是</div>
+                                    <label class="radio-pretty inline checked">
+                                        <input type="radio" checked="checked" name="radio"><span>已打开</span>
+                                    </label><br>
+                                    <label class="radio-pretty inline">
+                                        <input type="radio" name="radio"><span>未打开</span>
+                                    </label><br>
+                                    <label class="radio-pretty inline">
+                                        <input type="radio" name="radio"><span>已退信</span>
+                                    </label><br>
+                                    <label class="radio-pretty inline">
+                                        <input type="radio" name="radio"><span>已打开并且未回复</span>
+                                    </label><br>
+                                    <label class="radio-pretty inline">
+                                        <input type="radio" name="radio"><span>以上任意</span>
+                                    </label><br>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check6">
+                                <label for="check6">行业</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check7">
+                                <label for="check7">线索名称</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check8">
+                                <label for="check8">公司</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check9">
+                                <label for="check9">邮箱</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check01">
+                                <label for="check01">电话</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check02">
+                                <label for="check02">线索来源</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="--无--">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check03">
+                                <label for="check03">线索所有者</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check04">
+                                <label for="check04">姓</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check05">
+                                <label for="check05">名</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check06">
+                                <label for="check06">手机</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check07">
+                                <label for="check07">邮编</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check08">
+                                <label for="check08">街道</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check09">
+                                <label for="check09">职位</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check10">
+                                <label for="check10">网站</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check11">
+                                <label for="check11">线索状态</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="--无--">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check12">
+                                <label for="check12">等级</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="--无--">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check13">
+                                <label for="check13">称呼</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="--无--">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check14">
+                                <label for="check14">省/市</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check15">
+                                <label for="check15">标签</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="--无--">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </form>
+            <div class="filter fl" id="filters">
+                <input type="button" class="inp_btn" value="应用过滤器">
+                <a href="javascript:;">取消</a>
+            </div>
         </div>
+        <div class="fr righet_cont"></div>
     </div>
 </body>
 

@@ -7,6 +7,8 @@ body,html{
 }
 ul li{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 a{
     text-decoration: none;
@@ -47,6 +49,7 @@ a{
     padding: 4px 10px;
     background-color: #f7f7f7;
     cursor: pointer;
+    font-size: 15px;
     border: 1px solid rgb(0,0,0,0);
 }
 .h_box .h_icon{
@@ -351,6 +354,7 @@ input:focus, text-area:focus, button:focus {
 .ps-themec{
     max-height: 209px;
     overflow:auto;
+    background-color: #fff;
 }
 .cbTitle{
     font-size: 13px;
@@ -439,6 +443,8 @@ a.createlink span{
     border-top: 1px solid #e5e5e5;
     margin-top: -1px;
     background: #fff;
+    display: flex;
+    display: -webkit-flex;
 }
 .left_filter {
     width: 250px;
@@ -446,8 +452,9 @@ a.createlink span{
     box-sizing: border-box;
     position: fixed;
     z-index: 10;
-    overflow: hidden;
-    height: inherit!important;
+    height: 824px;
+    border-right: 1px solid #eee;
+    position: relative;
 }
 .leftSideBar {
     width: 100%;
@@ -542,13 +549,72 @@ a.createlink span{
 }
 .container{
     touch-action: none;
-    overflow: hidden!important;
+    overflow: scroll;
 }
 #scroll_d{
     width: 250px;
     max-width: 250px;
+    height: 700px;
+    overflow: auto;
 }
 
 .cb {
     clear: both;
+}
+.container ul {
+    padding: 0;
+}
+.container ul li{
+    line-height: 33px;
+    margin-left: 12px;
+    font-size: 14px;
+}
+.container ul li .down{
+    width: 215px;
+    margin-left: 20px;
+    display: none;
+}
+.container ul li .down .pull select{
+    border: 1px solid #bbb;
+    outline: none;
+}
+.container ul li .pull{
+    margin: 0;
+    padding: 0;
+    font-size: 12px!important;
+}
+.container ul li .pull .text{
+    width: 30px;
+    padding: 1px 5px!important;
+    border: 1px #D5D5D5 solid;
+    outline: none;
+    border-radius: 1px;
+    height: 15px;
+}
+.container ul li .down .pull-input input{
+    width: 200px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 8px 7px;
+}
+.filter{
+    padding: 2px 6px 30px 20px;
+    width: 230px;
+    line-height: 32px;
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+.inp_btn{
+    color: white!important;
+    border-radius: 2px!important;
+    background-color: #42a2eb!important;
+    border: solid 1px #42a2eb!important;
+    box-shadow: none!important;
+}
+.filter a{
+    margin-left: 10px;
+}
+.righet_cont{
+    width: 100%;
 }

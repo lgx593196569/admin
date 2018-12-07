@@ -1,32 +1,21 @@
-$(document).click(function () {
-    $(".h_lists").hide();
-    $("#toolsId").hide();
-});
-
 $("#stage").click(function (event) {
-    event.stopPropagation(); //不在派发事件
-    if ($(".h_lists").css("display") == "none") {
-        $(".h_lists").css("display", "block");
-    }
+    fn(".h_lists");
 });
 $("#cv_tools").click(function (event) {
-    event.stopPropagation(); //不在派发事件
-    if ($("#toolsId").css("display") == "none") {
-        $("#toolsId").css("display", "block");
-    }
+    fn("#toolsId");
 });
 var flag = true;
 $('.h_box').on('click', function () {
-    fn();
+    fn("#optionsHolder");
 })
-function fn() {
+function fn(obj) {
     if (flag) {
-        if ($("#optionsHolder").css("display") == "none") {
-            $("#optionsHolder").css("display", "block");
+        if ($(obj).css("display") == "none") {
+            $(obj).css("display", "block");
         }
         flag = false;
     } else {
-        $("#optionsHolder").hide();
+        $(obj).hide();
         flag = true;
     }
 }
@@ -48,4 +37,18 @@ $('.setupsearch').on('input', function () {
 $('#search_clear').on('click', function () {
     $('.setupsearch').val('');
     $(this).hide();
+})
+
+$(".check_box").change(function () {
+    var check = $(this).is(":checked");
+    console.log(check);
+    if (check == true) {
+        $(this).next().next().slideDown("slow");
+        $('#filters').show();
+        // $('.down').css('display', 'block');
+    } else {
+        $(this).next().next().slideUp("slow");
+        // $('.down').css('display', 'none');
+        $('#filters').hide();
+    }
 })
