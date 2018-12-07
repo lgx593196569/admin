@@ -123,3 +123,42 @@ window.onresize = function () {
     _height = document.documentElement.clientHeight;
     $("#iframe").css("height", _height * 0.8 + "px");
 }
+$("#chuangjian").on("click",function(){
+    $(".yqfather").css("display","block");
+    $(".biaoqian").hide();
+    xx = true;
+})
+$(".closed").on("click",function(){
+    $(".yqfather").css("display","none");
+})
+$(".btn1").on("click",function(){
+    $(".yqfather").css("display","none");
+})
+$(".btn2").on("click",function(){
+    $(".yqfather").css("display","none");
+})
+$(".convalue").on("focus",function(){
+    $(this).parent().css("border-bottom","1px solid #69cff3");
+})
+$(".convalue").on("blur",function(){
+    $(this).parent().css("border-bottom","none");
+})
+
+var checked = document.getElementsByClassName("checked");
+var check;
+for(var i = 0;i < checked.length;i++){   
+    checked[i].onclick = function(){
+        console.log($(this).attr("data-check"))
+        check = $(this).attr("data-check");
+        if(check == 'true'){
+            $(this).next().css("background-position","-76px -588px");
+            $(this).attr("data-check",false);
+        }else{
+            $(this).next().css("background-position","-55px -588px");
+            $(this).attr("data-check",true);
+        }
+            
+            
+    }
+   
+}

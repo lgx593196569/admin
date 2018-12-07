@@ -23,8 +23,8 @@
                         <li><i class="visite"></i>所有页签</li>
                     </ul>
                     <div class="admins">
-                        <span>创建</span>
-                        <span>管理</span>
+                        <span id="chuangjian">创建</span>
+                        <span id="guanli">管理</span>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,111 @@
             </div>
         </nav>
     </div>
-   
+    <div class="yqzufather">
+        <div class="yqzu">
+            <div class="top-box">页签组<span class="closed1"></span></div>
+            <div class="foot-box">
+                <div>您至多可以创建<span>25</span>个页签组。每个页签组可以包含无限数量的页签。页签组中的页签访问权限基于用户角色。</div>
+                <div style="position:relative;">
+                    <div>
+                        <input type="button" value="创建标签页">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="yqfather">
+        <div class="yqbox">
+            <div class="top-box">页签组<span class="closed"></span></div>
+            <div class="foot-box">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>名称</td>
+                            <td>
+                                <input type="text" style="border:none;width:200px;" class="convalue">
+                            </td>
+                        </tr>
+                        <tr class="contentss">
+                            <td>页签</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <label for="">
+                                            <input type="checkbox" disabled>
+                                            <span></span>
+                                        </label>
+                                        <span style="padding-left:5px;">主页</span>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input class="checked" data-check="true" type="checkbox">
+                                            <span></span>
+                                        </label>
+                                        <span style="padding-left:5px;">线索</span>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input class="checked" data-check="true" type="checkbox">
+                                            <span></span>
+                                        </label>
+                                        <span style="padding-left:5px;">联系人</span>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input class="checked" data-check="true" type="checkbox">
+                                            <span></span>
+                                        </label>
+                                        <span style="padding-left:5px;">客户</span>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input class="checked" data-check="true" type="checkbox">
+                                            <span></span>
+                                        </label>
+                                        <span style="padding-left:5px;">交易</span>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input class="checked" data-check="true" type="checkbox">
+                                            <span></span>
+                                        </label>
+                                        <span style="padding-left:5px;">任务、通话及活动</span>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input class="checked" data-check="true" type="checkbox">
+                                            <span></span>
+                                        </label>
+                                        <span style="padding-left:5px;">报表</span>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input class="checked" data-check="true" type="checkbox">
+                                            <span></span>
+                                        </label>
+                                        <span style="padding-left:5px;">数据分析</span>
+                                    </li>
+                                    <li>
+                                        <label for="">
+                                            <input class="checked" data-check="true" type="checkbox">
+                                            <span></span>
+                                        </label>
+                                        <span style="padding-left:5px;">电子邮件</span>
+                                    </li>
+                                </ul>
+                                <div class="btns">
+                                    <input type="button" value="取消" class="btn1">
+                                    <input type="submit" value="保存" class="btn2">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
     <iframe src="./components/index.html" frameborder="0" id="iframe"></iframe>
     <div class="footer">
         <div class="leftbox">
