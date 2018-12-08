@@ -4,14 +4,27 @@ body,html{
     margin:0;
     padding: 0;
     background-color: #FFF;
+    font-family:ProximaNovaRegular, sans-serif;
 }
 ul li{
     list-style: none;
     margin: 0;
     padding: 0;
 }
+tr,td{
+    margin: 0;
+    padding: 0;
+}
 a{
     text-decoration: none;
+}
+table{
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
 }
 .h_conter .h_nav{
     padding: 20px 0 10px;
@@ -24,6 +37,7 @@ a{
     position: relative;
     z-index: 13;
     border-bottom: 1px solid #eee;
+    display: none;
 }
 .h_p16{
     padding-left: 16px!important;
@@ -297,6 +311,127 @@ input:focus, text-area:focus, button:focus {
     border-bottom: 1px solid #eee;
     margin: 10px!important;
  }
+ .ButtonLayer{
+    height: 36px;
+    width: 100%;
+    position: relative;
+    line-height: 36px;
+    z-index: 13;
+    border-bottom: 1px solid #eee;
+    /* display: none; */
+    padding: 10px 0 20px;
+    background-color: #f8f8f8;
+ }
+ .pl30{
+    padding-left: 30px!important;
+ }
+ .pwie {
+    position: relative;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ButtonLayer table{
+    border-bottom: 0 solid #B1B1B1;
+    padding-bottom: 2px;    
+}
+.ButtonLayer table span.selCount{
+    color: #333;
+}
+.ButtonLayer table span.selCount .openSans{
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 14px;
+    font-family: ProximaNovaLtSemibold,sans-serif;
+    font-weight: normal;
+}
+.selCountIcon {
+    width: auto;
+    height: 12px;
+    font-size: 12px;
+    color: #2C7BD0!important;
+    margin-top: -5px;
+    vertical-align: top;
+    margin-left: 8px;
+    display: inline-block;
+}
+.vat{
+    padding-left: 10px;
+    vertical-align: top!important;
+}
+.vatText{
+    width: 79px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 15px;
+}
+.CreateTaskBtn{
+    display: flex;
+    display: -webkit-flex;
+}
+.CreateTaskBtn div{
+    margin-left: 10px;
+    background-color: #fff;
+}
+.vatText1,.vatText2{
+    width: 97px;
+    height: 34px;
+    line-height: 34px;
+}
+.vatText3{
+    width: 75px;
+    position: relative;
+}
+.vatText3 i{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: url(../images/icon.svg) no-repeat -15px -21px;
+}
+.vatText4{
+    width: 58px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin-top: 2px;
+}
+.vatText4 i{
+    width: 37px;
+    height: 5px;
+    display: inline-block;
+    background: url(../images/icon.svg) no-repeat -164px -214px;
+}
+.fenye{
+    width: 89px;
+    height: 24px;
+    line-height: 24px;
+    text-align:center;
+    float: right;
+    font-size: 15px;
+    position: relative;
+    
+}
+.fenye i{
+    width: 11px;
+    height: 21px;
+    opacity: .3;
+    cursor: auto;
+    display: inline-block;
+    position: absolute;
+}
+.fenye i.icon_i1{
+    background: url(../images/icon.svg) no-repeat -2px -127px;
+    top: 3px;
+    left: 0px;
+}
+.fenye i.icon_i2{
+    background: url(../images/icon.svg) no-repeat -22px -127px;
+    top: 3px;
+    right: 0px;
+}
 
  .option{
     display: block;
@@ -621,6 +756,43 @@ a.createlink span{
 .right_top{
     width: 100%;
     border-bottom: 1px solid #eee;
-    height: 40px;
+    height: 41px;
     border-top:1px solid #eee;
+}
+.right_top table td{
+    text-align: left;
+    font-size: 15px;
+    color: #9d9d9d;
+    border-bottom: 3px double #e5e5e5;
+    font-weight: normal;
+    text-transform: uppercase;
+    outline: none;
+    padding: 0 10px;
+    vertical-align: middle; 
+}
+.right_top table td .icon1{
+    width: 21px;
+    height: 17px;
+    border: 0;
+    background: url(../images/icon.svg) no-repeat -166px -139px;
+    margin-top: 1px;
+    display: block;
+    cursor: pointer;
+}
+.right_top table td .icon2{
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    vertical-align: middle;
+    width: 15px;
+    background: url(../images/icon.svg) no-repeat -79px -474px;
+}
+.right_top table a{
+    color: #777;
+    font-size: 14px!important;
+    vertical-align: sub;
+    cursor: pointer;
+}
+.right_top table a:hover{
+    text-decoration: none;
 }
