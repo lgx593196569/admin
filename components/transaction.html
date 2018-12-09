@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>交易</title>
     <link rel="stylesheet" href="../css/transaction.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/rybCommon.css">
 </head>
 
 <body>
@@ -346,18 +347,21 @@
                     <li>
                         <input type="checkbox" id="checkbox9">
                         <label for="checkbox9">金额 </label>
-                        <div class="ryb_facet">
-                            <select name="" id="">
-                                <option value="">是</option>
-                                <option value="">不是</option>
-                                <option value="">包含</option>
-                                <option value="">不包含</option>
-                                <option value="">开始字符</option>
-                                <option value="">结束字符</option>
+                        <div class="ryb_facet" style="height:20px;">
+                            <select name="" id="" style="width: 40px;">
+                                <option value="">=</option>
+                                <option value="">!=</option>
+                                <option value="">
+                                    <</option> <option value="">
+                                        <=</option> <option value="">>
+                                </option>
+                                <option value="">>=</option>
+                                <option value="">介于</option>
+                                <option value="">不介于</option>
                                 <option value="">为空</option>
                                 <option value="">不为空</option>
                             </select>
-                            <input type="text" placeholder="在这里输入">
+                            <input type="text" style="border:1px solid #eee;width:50px;height:17px;padding:0px;">
                         </div>
                     </li>
                     <li>
@@ -688,14 +692,100 @@
                 </ul>
                 <div class="ryb_lv_filter_options">
                     <input type="button" value="应用过滤器">
-                    <a href="#">清空</a>
+                    <a href="javaScript:;" id="qingkong">清空</a>
                 </div>
             </div>
-            <div class="ryb_contentList"></div>
+            <div class="ryb_contentList">
+                <div class="ryb_tableHeaderBg">
+                    <table>
+                        <tr>
+                            <td class="tableHeaderBg1">
+                                <span></span>
+                            </td>
+                            <td class="tableHeaderBg2">
+                                <span></span>
+                            </td>
+                            <td class="tableHeaderBg3 active"></td>
+                            <td class="tableHeaderBg4 active">
+                                交易名称
+                            </td>
+                            <td class="tableHeaderBg5 active" style="text-align:right;">金额</td>
+                            <td class="tableHeaderBg6 active">阶段</td>
+                            <td class="tableHeaderBg7 active">预计成交日期</td>
+                            <td class="tableHeaderBg8 active">客户名称</td>
+                            <td class="tableHeaderBg9 active">联系人名称</td>
+                            <td class="tableHeaderBg9 active">交易所有者</td>
+                        </tr>
+                    </table>
+                    <table style="margin-top:2px;border-top:1px solid #eee;" class="tableContent">
+                        <tr style="border-bottom:1px solid #eee;">
+                            <td class="tableHeaderBg1">
+                                <!-- <span></span> -->
+                            </td>
+                            <td class="tableHeaderBg2">
+                                <span></span>
+                            </td>
+                            <td class="tableHeaderBg3 active"></td>
+                            <td class="tableHeaderBg4 active jiaoyi">
+                                吉祥如意餐饮
+                            </td>
+                            <td class="tableHeaderBg5 active jine" style="text-align:right;">￥60,000.00</td>
+                            <td class="tableHeaderBg6 active jieduan">提案/报价</td>
+                            <td class="tableHeaderBg7 active yujiyime">2018-12-08</td>
+                            <td class="tableHeaderBg8 active kehuming">吉祥如意餐饮</td>
+                            <td class="tableHeaderBg9 active"></td>
+                            <td class="tableHeaderBg9 active jiaoyisuoyou">努力优秀</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid #eee;">
+                            <td class="tableHeaderBg1">
+                                <!-- <span></span> -->
+                            </td>
+                            <td class="tableHeaderBg2">
+                                <span></span>
+                            </td>
+                            <td class="tableHeaderBg3 active"></td>
+                            <td class="tableHeaderBg4 active jiaoyi">
+                                吉祥如意餐饮
+                            </td>
+                            <td class="tableHeaderBg5 active jine" style="text-align:right;">￥60,000.00</td>
+                            <td class="tableHeaderBg6 active jieduan">提案/报价</td>
+                            <td class="tableHeaderBg7 active yujiyime">2018-12-08</td>
+                            <td class="tableHeaderBg8 active kehuming">吉祥如意餐饮</td>
+                            <td class="tableHeaderBg9 active"></td>
+                            <td class="tableHeaderBg9 active jiaoyisuoyou">努力优秀</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>
+<script id="test" type="text/html">
+    {{if code==200}}
+    {{each data}}
+    <li>
+        <img src="upload/{{$value.imgName}}" alt="">
+        <p>文件名称：<span>{{$value.imgName}}</span></p>
+        <p>文件大小：<span>{{$value.imgSize}}</span></p>
+        <p>文件类型：<span>{{$value.imgType}}</span></p>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="../js/transaction.js"></script>
+<script src="../js/rybCoommon.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $.ajax({
+        type: "get",
+        url: "ryb.php",
+        dataType: "json",
+        success: function (data) {
+            // var html = template("test", data);
+            // $(".box").html(html);
+            console.log(data);
+        }
+    });
+</script>
