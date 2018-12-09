@@ -17,6 +17,8 @@ iconsvg.onclick = function(){
     if(xx){
         $(".biaoqian").show();
         $(".addmd").hide();
+        $(".add").hide();
+        adds = true;
         xx = false;
         zz = true;
     }else{
@@ -28,6 +30,8 @@ more.onclick = function(){
     if(zz){
         $(".addmd").show();
         $(".biaoqian").hide();
+        $(".add").hide();
+        adds = true;
         xx = true;
         zz = false;
     }else{
@@ -85,8 +89,10 @@ $(".sousuo").on("click",function(){
     $(this).hide();
     $(".tianjia").css("margin-left",'24px');
     $(".kuang").show();
+    $(".add").hide();
     xx = true;
     zz = true;
+    adds = true;
 })
 $(".close").on("click",function(){
     $(".sousuo").show();
@@ -94,3 +100,65 @@ $(".close").on("click",function(){
     $(".kuang").hide();
     $(".tianjia").css("margin-left",'0');
 })
+var adds = true;
+$(".tianjia").on("click",function(){
+    if(adds){
+        $(".add").show();
+        $(".biaoqian").hide();
+        $(".addmd").hide();
+        xx = true;
+        zz = true;
+        adds = false;
+    }else{
+        $(".add").hide(); 
+        adds = true;
+    }
+})
+var _height = document.documentElement.clientHeight;
+// console.log(_height);
+window.onload = function () {
+    $("#iframe").css("height", _height* 0.8 + "px");
+}
+window.onresize = function () {
+    _height = document.documentElement.clientHeight;
+    $("#iframe").css("height", _height * 0.8 + "px");
+}
+$("#chuangjian").on("click",function(){
+    $(".yqfather").css("display","block");
+    $(".biaoqian").hide();
+    xx = true;
+})
+$(".closed").on("click",function(){
+    $(".yqfather").css("display","none");
+})
+$(".btn1").on("click",function(){
+    $(".yqfather").css("display","none");
+})
+$(".btn2").on("click",function(){
+    $(".yqfather").css("display","none");
+})
+$(".convalue").on("focus",function(){
+    $(this).parent().css("border-bottom","1px solid #69cff3");
+})
+$(".convalue").on("blur",function(){
+    $(this).parent().css("border-bottom","none");
+})
+
+var checked = document.getElementsByClassName("checked");
+var check;
+for(var i = 0;i < checked.length;i++){   
+    checked[i].onclick = function(){
+        console.log($(this).attr("data-check"))
+        check = $(this).attr("data-check");
+        if(check == 'true'){
+            $(this).next().css("background-position","-76px -588px");
+            $(this).attr("data-check",false);
+        }else{
+            $(this).next().css("background-position","-55px -588px");
+            $(this).attr("data-check",true);
+        }
+            
+            
+    }
+   
+}

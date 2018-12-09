@@ -4,6 +4,7 @@ body,html{
     margin:0;
     padding: 0;
     background-color: #FFF;
+<<<<<<< HEAD
     font-family:ProximaNovaRegular, sans-serif;
 }
 ul li{
@@ -14,10 +15,16 @@ ul li{
 tr,td{
     margin: 0;
     padding: 0;
+=======
+}
+ul li{
+    list-style: none;
+>>>>>>> master
 }
 a{
     text-decoration: none;
 }
+<<<<<<< HEAD
 table{
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
@@ -26,6 +33,8 @@ table{
     border-bottom-width: 0px;
     border-left-width: 0px;
 }
+=======
+>>>>>>> master
 .h_conter .h_nav{
     padding: 20px 0 10px;
     background-color: #f8f8f8;
@@ -37,7 +46,10 @@ table{
     position: relative;
     z-index: 13;
     border-bottom: 1px solid #eee;
+<<<<<<< HEAD
     /* display: none; */
+=======
+>>>>>>> master
 }
 .h_p16{
     padding-left: 16px!important;
@@ -63,7 +75,10 @@ table{
     padding: 4px 10px;
     background-color: #f7f7f7;
     cursor: pointer;
+<<<<<<< HEAD
     font-size: 15px;
+=======
+>>>>>>> master
     border: 1px solid rgb(0,0,0,0);
 }
 .h_box .h_icon{
@@ -311,6 +326,7 @@ input:focus, text-area:focus, button:focus {
     border-bottom: 1px solid #eee;
     margin: 10px!important;
  }
+<<<<<<< HEAD
  .ButtonLayer{
     height: 36px;
     width: 100%;
@@ -533,6 +549,8 @@ input:focus, text-area:focus, button:focus {
 }
 
 
+=======
+>>>>>>> master
 
  .option{
     display: block;
@@ -590,7 +608,10 @@ input:focus, text-area:focus, button:focus {
 .ps-themec{
     max-height: 209px;
     overflow:auto;
+<<<<<<< HEAD
     background-color: #fff;
+=======
+>>>>>>> master
 }
 .cbTitle{
     font-size: 13px;
@@ -679,8 +700,11 @@ a.createlink span{
     border-top: 1px solid #e5e5e5;
     margin-top: -1px;
     background: #fff;
+<<<<<<< HEAD
     display: flex;
     display: -webkit-flex;
+=======
+>>>>>>> master
 }
 .left_filter {
     width: 250px;
@@ -688,9 +712,14 @@ a.createlink span{
     box-sizing: border-box;
     position: fixed;
     z-index: 10;
+<<<<<<< HEAD
     height: 824px;
     border-right: 1px solid #eee;
     position: relative;
+=======
+    overflow: hidden;
+    height: inherit!important;
+>>>>>>> master
 }
 .leftSideBar {
     width: 100%;
@@ -782,6 +811,7 @@ a.createlink span{
     right: 0;
     top: 4px;
     margin: 10px 0 0;
+<<<<<<< HEAD
 }
 .container{
     touch-action: none;
@@ -896,4 +926,6 @@ a.createlink span{
 }
 .right_top table a:hover{
     text-decoration: none;
+=======
+>>>>>>> master
 }
