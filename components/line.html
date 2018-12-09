@@ -113,7 +113,7 @@
                         </td>
                         <td width="90%">
                             <table style="float:left;">
-                                <tr>
+                                <tr class="pr">
                                     <td class="vat">
                                         <div class="vatText">运行宏</div>
                                     </td>
@@ -125,6 +125,14 @@
                                             <i></i>
                                         </div>
                                         <div class="vatText4"><i></i></div>
+                                        <ul class="vat_list">
+                                            <li>
+                                                <a href="javascript:;">添加标签</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="disabled">移除标签</a>
+                                            </li>
+                                        </ul>
                                     </td>
                                 </tr>
                             </table>
@@ -843,11 +851,11 @@
         <div class="right_cont">
             <div class="right_top">
                 <table>
-                    <td style="min-width: 50px; max-width: 50px; height: 41px;">
+                    <td style="min-width: 100px; max-width: 100px; height: 41px;">
                         <i class="icon1"></i>
                     </td>
                     <td>
-                        <i class="icon2"></i>
+                        <input type="checkbox" style="width:15px;height:15px;">
                     </td>
                     <td style="min-width: 110px; max-width: 110px; height: 41px;"></td>
                     <td style="min-width: 152px; max-width: 152px; height: 41px;">
@@ -868,7 +876,41 @@
                     <td style="min-width: 154px; max-width: 154px; height: 41px;">
                         <a href="javascript:;">线索所有者</a>
                     </td>
-                    <td style="min-width: 30px; max-width: 30px; height: 41px;"></td>
+                    <td style="min-width: 50px; max-width: 50px; height: 41px;"></td>
+                </table>
+            </div>
+            <div class="right_cont_text">
+                <table>
+                    <!-- <tr>
+                        <td style="min-width: 100px; max-width: 100px; height: 41px;">
+                            <i class="icon1"></i>
+                        </td>
+                        <td>
+                            <input type="checkbox" style="width:15px;height:15px;">
+                        </td>
+                        <td style="min-width: 110px; max-width: 110px; height: 41px;"></td>
+                        <td style="min-width: 152px; max-width: 152px; height: 41px;">
+                            <a href="javascript:;">三 张</a>
+                        </td>
+                        <td style="min-width: 233px; max-width: 233px; height: 41px;">
+                            <a href="javascript:;" class="text_s">创新业务系统</a>
+                        </td>
+                        <td style="min-width: 311px; max-width: 311px; height: 41px;">
+                            <a href="javascript:;">Chau-kitzman@qq.com</a>
+                        </td>
+                        <td style="min-width: 189px; max-width: 189px; height: 41px;" class="td_d">
+                            <a href="javascript:;" class="text_s">555-555-5555</a>
+                            <i class="icon2"></i>
+                        </td>
+                        <td style="min-width: 171px; max-width: 171px; height: 41px;">
+                            <a href="javascript:;" class="text_s"> 广告</a>
+                        </td>
+                        <td style="min-width: 154px; max-width: 154px; height: 41px;">
+                            <a href="javascript:;" class="text_s">努力优秀</a>
+                        </td>
+                        <td style="min-width: 50px; max-width: 50px; height: 41px;">
+                        </td>
+                    </tr> -->
                 </table>
             </div>
         </div>
@@ -876,5 +918,117 @@
 </body>
 
 </html>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="../js/line.js"></script>
+
+<script type="text/html" id="test">
+    {{if code==200}}
+        {{each data}}
+            <tr>
+                <td style="min-width: 100px; max-width: 100px; height: 41px;">
+                    <i class="icon1"></i>
+                </td>
+                <td>
+                    <input type="checkbox" style="width:15px;height:15px;">
+                </td>
+                <td style="min-width: 110px; max-width: 110px; height: 41px;"></td>
+                <td style="min-width: 152px; max-width: 152px; height: 41px;">
+                    <a href="javascript:;">{{$value.name}} {{$value.surname}}</a>
+                </td>
+                <td style="min-width: 233px; max-width: 233px; height: 41px;">
+                    <a href="javascript:;" class="text_s">{{$value.post}}</a>
+                </td>
+                <td style="min-width: 311px; max-width: 311px; height: 41px;">
+                    <a href="javascript:;">{{$value.email}}</a>
+                </td>
+                <td style="min-width: 189px; max-width: 189px; height: 41px;" class="td_d">
+                    <a href="javascript:;" class="text_s">555-555-5555</a>
+                    <i class="icon2"></i>
+                </td>
+                <td style="min-width: 171px; max-width: 171px; height: 41px;">
+                    <a href="javascript:;" class="text_s">{{$value.clue}}</a>
+                </td>
+                <td style="min-width: 154px; max-width: 154px; height: 41px;">
+                    <a href="javascript:;" class="text_s">{{$value.owner}}</a>
+                </td>
+                <td style="min-width: 50px; max-width: 50px; height: 41px;">
+                </td>
+            </tr>
+        {{/each}}
+        {{else}}
+        <tr>
+            <td>暂无记录</td>
+        </tr>
+    {{/if}}
+</script>
+
+<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/artTemplate.js/3.0.1/template.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url: "../后台录入数据/api.php",
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                var html = template("test", data);
+                $('.right_cont_text table').html(html);
+            },
+        });
+    });
+
+    $("#stage").click(function (event) {
+        fn(".h_lists");
+    });
+    $("#cv_tools").click(function (event) {
+        fn("#toolsId");
+    });
+    var flag = true;
+    $('.h_box').on('click', function () {
+        fn("#optionsHolder");
+    })
+    $('.vatText3').on('click', function () {
+        fn(".vat_list");
+    })
+    function fn(obj) {
+        if (flag) {
+            if ($(obj).css("display") == "none") {
+                $(obj).css("display", "block");
+            }
+            flag = false;
+        } else {
+            $(obj).hide();
+            flag = true;
+        }
+    }
+
+    $('.mt12').on('click', function () {
+        $('#filter').show();
+        $('.mt12').hide();
+    });
+
+    $('.setupsearch').on('input', function () {
+        var val = $('.setupsearch').val();
+        if (val == '') {
+            $('#search_clear').hide();
+        } else {
+            $('#search_clear').show();
+        }
+    })
+
+    $('#search_clear').on('click', function () {
+        $('.setupsearch').val('');
+        $(this).hide();
+    })
+
+    $(".check_box").change(function () {
+        var check = $(this).is(":checked");
+        console.log(check);
+        if (check == true) {
+            $(this).next().next().slideDown("slow");
+            $('#filters').show();
+        } else {
+            $(this).next().next().slideUp("slow");
+            $('#filters').hide();
+        }
+    })
+</script>

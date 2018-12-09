@@ -1,12 +1,1120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/contacts.css">
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
 </head>
+
 <body>
-    
+    <div class="h_conter">
+        <div class="h_nav h_nav_top">
+            <div class="h_p16 h_box_h">
+                <div class="fl pr h_nav_left">
+                    <div class="h_box">
+                        所有未关闭的线索
+                        <i class="h_icon"></i>
+                    </div>
+                    <div class="h_icons">
+                        <a href="javascript:;">编辑</a>
+                        <span class="date"></span>
+                        <img src="../images/spacer.gif" alt="">
+                    </div>
+                </div>
+                <div class="h_nav_right fr pr">
+                    <div class="pr dib mr30 ml30">
+                        <a href="javascript:;" class="svgIconsImg listctive mL10"></a>
+                        <a href="javascript:;" class="svgIconsImg taskctive mL10"></a>
+                        <a href="javascript:;" class="svgIconsImg cveditIcon mL10"></a>
+                    </div>
+                    <span class="custCon pr">
+                        <button class="newbtn custBtn ">新建</button>
+                        <span>
+                            <input type="button" class="newwhitebtn customImportBtn" value="导入" id="stage">
+                            <div class="h_list h_lists">
+                                <div class="boxShadowMask padAndBg">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;" class="link">导入线索</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="link">导入备注</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="normalDropDown pr mr30" style="margin-top:-6px;">
+                        <a href="javascript:;" class="moredotparentBtn mr0 newwhitebtn " id="cv_tools">
+                            <span class="moredot"></span>
+                        </a>
+                        <div class="h_list" id="toolsId">
+                            <div class="boxShadowMask padAndBgc" style="display:block;">
+                                <ul class="oUl">
+                                    <li>
+                                        <a href="javascript:;">批量删除</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">批量更新 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">批量转换</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">管理标签</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">群发邮件</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">自动应答</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">审批线索</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">重复的线索记录</a>
+                                    </li>
+                                    <li class="menu_sep"></li>
+                                    <li>
+                                        <a href="javascript:;">Zoho Sheet视图</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">打印预览</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="ButtonLayer">
+            <div class="pwie pl30">
+                <table>
+                    <tr>
+                        <td width="15%">
+                            <span class="selCount">
+                                <span>
+                                    <span class="openSans">10</span>
+                                    <span style="font-size:16px;
+                                ">在此列表视图中选择的线索。</span>
+                                </span>
+
+                                <a href="javascript:;" class="selCountIcon">清空</a>
+                            </span>
+                        </td>
+                        <td width="90%">
+                            <table style="float:left;">
+                                <tr class="pr">
+                                    <td class="vat">
+                                        <div class="vatText">运行宏</div>
+                                    </td>
+                                    <td class="CreateTaskBtn">
+                                        <div class="vatText1 vatText">发送邮件</div>
+                                        <div class="vatText2 vatText">创建任务</div>
+                                        <div class="vatText3 vatText">
+                                            标签
+                                            <i></i>
+                                        </div>
+                                        <div class="vatText4"><i></i></div>
+                                        <ul class="vat_list">
+                                            <li>
+                                                <a href="javascript:;">添加标签</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="disabled">移除标签</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="fenye">
+                                <i class="icon_i1"></i>
+                                <span>1 到 10</span>
+                                <i class="icon_i2"></i>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="optionsHolder" class="pa pt0 option">
+        <div class="boxShadowContain boxShadowMask">
+            <div class="searchBox pr" id="SearchBox">
+                <input type="text">
+            </div>
+            <div class="pr ps-themec">
+                <div>
+                    <span class="cbTitle">分享给我的</span>
+                    <ul>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">所有未关闭的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">已转换的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">垃圾线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">邮件标签</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">我的已修改线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">我的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">不合格的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">打开线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">最近创建的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">最近修改的线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">今日线索</span>
+                        </li>
+                        <li class="cp">
+                            <span class="Star emptyStar"></span>
+                            <span class="cbViews">未读的线索</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w100 cbCreateView">
+                <a href="javascript:;" class="cp pl30 ptb6 db createlink"><span></span>新建视图</a>
+            </div>
+        </div>
+    </div>
+    <div class="content_d pt0 bt0">
+        <div class="leftBar fl pr left_filter">
+            <form>
+                <div class="custom fl pr">
+                    <div class="head_top mb5 pl15 pr20 h35">
+                        <div class="mt12">
+                            <span class="fl mw188 dib defaultcursor" style="font-size:15px;">过滤线索通过</span>
+                            <span class="searchIcon dib fr op05 cp"></span>
+                        </div>
+                        <div class="pr fl" id="filter" style="margin-bottom:-1px;display:none">
+                            <span class="setupsearchicon ico-search svgIcons" style="left:1px;"></span>
+                            <input type="text" class="setupsearch" placeholder="搜索" value="">
+                            <a href="javascript:;" class="fr f10 clear svgIcons ico-close ml5 cp mt10" id="search_clear"
+                                style="display:none;"></a>
+                        </div>
+                    </div>
+                    <div class="cb container pr" id="scroll_d">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check1">
+                                <label title="受影响的记录" for="check1">受影响的记录</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        通过
+                                        <select name="" id="">
+                                            <option value="0">用户和系统</option>
+                                            <option value="1">用户或系统</option>
+                                            <option value="2">用户</option>
+                                            <option value="3">系统</option>
+                                            <option value="4">仅用户</option>
+                                            <option value="5">仅系统</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull" style="margin-left: 27px;">
+                                        <select name="" id="">
+                                            <option value="0">在最近</option>
+                                            <option value="1">今天</option>
+                                            <option value="2">本周</option>
+                                            <option value="3">本月</option>
+                                            <option value="4">今年</option>
+                                            <option value="5">在过去30天</option>
+                                            <option value="6">在过去60天</option>
+                                            <option value="7">在过去90天</option>
+                                            <option value="8">直到现在</option>
+                                        </select>
+                                        <input type="text" class="text" value="2">
+                                        <select name="" id="">
+                                            <option value="0">天</option>
+                                            <option value="1">周</option>
+                                            <option value="2">月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check2">
+                                <label title="受影响的记录" for="check2">未受影响的记录</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        通过
+                                        <select name="" id="">
+                                            <option value="0">用户和系统</option>
+                                            <option value="1">用户或系统</option>
+                                            <option value="2">用户</option>
+                                            <option value="3">系统</option>
+                                            <option value="4">仅用户</option>
+                                            <option value="5">仅系统</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull" style="margin-left: 27px;">
+                                        <select name="" id="">
+                                            <option value="0">在最近</option>
+                                            <option value="1">今天</option>
+                                            <option value="2">本周</option>
+                                            <option value="3">本月</option>
+                                            <option value="4">今年</option>
+                                            <option value="5">在过去30天</option>
+                                            <option value="6">在过去60天</option>
+                                            <option value="7">在过去90天</option>
+                                            <option value="8">直到现在</option>
+                                        </select>
+                                        <input type="text" class="text" value="2">
+                                        <select name="" id="">
+                                            <option value="0">天</option>
+                                            <option value="1">周</option>
+                                            <option value="2">月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check3">
+                                <label title="受影响的记录" for="check3">记录操作</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">已修改</option>
+                                            <option value="1">未修改</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull">
+                                        通过
+                                        <select name="" id="">
+                                            <option value="0">用户和系统</option>
+                                            <option value="1">用户或系统</option>
+                                            <option value="2">用户</option>
+                                            <option value="3">系统</option>
+                                            <option value="4">仅用户</option>
+                                            <option value="5">仅系统</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull" style="margin-left: 27px;">
+                                        <select name="" id="">
+                                            <option value="0">在最近</option>
+                                            <option value="1">今天</option>
+                                            <option value="2">本周</option>
+                                            <option value="3">本月</option>
+                                            <option value="4">今年</option>
+                                            <option value="5">在过去30天</option>
+                                            <option value="6">在过去60天</option>
+                                            <option value="7">在过去90天</option>
+                                            <option value="8">直到现在</option>
+                                        </select>
+                                        <input type="text" class="text" value="2">
+                                        <select name="" id="">
+                                            <option value="0">天</option>
+                                            <option value="1">周</option>
+                                            <option value="2">月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check4">
+                                <label title="受影响的记录" for="check4">相关的操作记录</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">已完成</option>
+                                            <option value="1">未完成</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull">
+                                        通过
+                                        <select name="" id="">
+                                            <option value="0">用户和系统</option>
+                                            <option value="1">用户或系统</option>
+                                            <option value="2">用户</option>
+                                            <option value="3">系统</option>
+                                            <option value="4">仅用户</option>
+                                            <option value="5">仅系统</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull" style="margin-left: 27px;">
+                                        <select name="" id="">
+                                            <option value="0">在最近</option>
+                                            <option value="1">今天</option>
+                                            <option value="2">本周</option>
+                                            <option value="3">本月</option>
+                                            <option value="4">今年</option>
+                                            <option value="5">在过去30天</option>
+                                            <option value="6">在过去60天</option>
+                                            <option value="7">在过去90天</option>
+                                            <option value="8">直到现在</option>
+                                        </select>
+                                        <input type="text" class="text" value="2">
+                                        <select name="" id="">
+                                            <option value="0">天</option>
+                                            <option value="1">周</option>
+                                            <option value="2">月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check5">
+                                <label title="受影响的记录" for="check5">邮件状态</label>
+                                <div class="down">
+                                    <div class="pull" style="margin-left: 67px;margin-top: -34px;">
+                                        <select name="" id="">
+                                            <option value="0">已发送</option>
+                                            <option value="1">未发送</option>
+                                            <option value="2">已打开</option>
+                                            <option value="3">未打开</option>
+                                            <option value="4">已接收</option>
+                                            <option value="5">未接收</option>
+                                            <option value="6">已退信</option>
+                                            <option value="7">已打开并且未回复</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">在最近</option>
+                                            <option value="1">今天</option>
+                                            <option value="2">本周</option>
+                                            <option value="3">本月</option>
+                                            <option value="4">今年</option>
+                                            <option value="5">在过去30天</option>
+                                            <option value="6">在过去60天</option>
+                                            <option value="7">在过去90天</option>
+                                            <option value="8">直到现在</option>
+                                        </select>
+                                        <input type="text" class="text" value="2">
+                                        <select name="" id="">
+                                            <option value="0">天</option>
+                                            <option value="1">周</option>
+                                            <option value="2">月</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull">并且状态是</div>
+                                    <label class="radio-pretty inline checked">
+                                        <input type="radio" checked="checked" name="radio"><span>已打开</span>
+                                    </label><br>
+                                    <label class="radio-pretty inline">
+                                        <input type="radio" name="radio"><span>未打开</span>
+                                    </label><br>
+                                    <label class="radio-pretty inline">
+                                        <input type="radio" name="radio"><span>已退信</span>
+                                    </label><br>
+                                    <label class="radio-pretty inline">
+                                        <input type="radio" name="radio"><span>已打开并且未回复</span>
+                                    </label><br>
+                                    <label class="radio-pretty inline">
+                                        <input type="radio" name="radio"><span>以上任意</span>
+                                    </label><br>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check6">
+                                <label for="check6">行业</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check7">
+                                <label for="check7">线索名称</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check8">
+                                <label for="check8">公司</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check9">
+                                <label for="check9">邮箱</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check01">
+                                <label for="check01">电话</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check02">
+                                <label for="check02">线索来源</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="--无--">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check03">
+                                <label for="check03">线索所有者</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check04">
+                                <label for="check04">姓</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check05">
+                                <label for="check05">名</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check06">
+                                <label for="check06">手机</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check07">
+                                <label for="check07">邮编</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check08">
+                                <label for="check08">街道</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check09">
+                                <label for="check09">职位</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check10">
+                                <label for="check10">网站</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check11">
+                                <label for="check11">线索状态</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="--无--">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check12">
+                                <label for="check12">等级</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="--无--">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check13">
+                                <label for="check13">称呼</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="--无--">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check14">
+                                <label for="check14">省/市</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="在这里输入">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" class="check_box" id="check15">
+                                <label for="check15">标签</label>
+                                <div class="down">
+                                    <div class="pull">
+                                        <select name="" id="">
+                                            <option value="0">是</option>
+                                            <option value="1">不是</option>
+                                            <option value="2">包含</option>
+                                            <option value="3">不包含</option>
+                                            <option value="4">开始字符</option>
+                                            <option value="5">结束字符</option>
+                                            <option value="6">为空</option>
+                                            <option value="7">不为空</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-input">
+                                        <input type="text" placeholder="--无--">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </form>
+            <div class="filter fl" id="filters">
+                <input type="button" class="inp_btn" value="应用过滤器">
+                <a href="javascript:;">取消</a>
+            </div>
+        </div>
+        <div class="right_cont">
+            <div class="canvas_rig">
+                <div class="canvasview">
+                    <div class="cv_top">
+                        <input type="checkbox">
+                        <span class="sp_h">画布视图:</span>
+                        <div class="canvas_Acc">
+                            <span class="sps">Accounts-画布</span>
+                            <i></i>
+                            <div class="acco">
+                                <span class="sp">与我共享的</span>
+                                <div>
+                                    <span class="sp1"></span>
+                                    <span class="sp2">Accounts-画布</span>
+                                </div>
+                                <ul>
+                                    <li>管理</li>
+                                    <li>创建 画布视图</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href=" ">编辑</a>
+                    </div>
+                    <div class="tablescroll">
+                        <div class="sort">
+                            <div class="sorts">
+                                <span>排序按</span>
+                                <i></i>
+                            </div>
+                            <div class="sort_li">
+                                <div class="sort_search">
+                                    <span></span>
+                                    <input type="text">
+                                </div>
+                                <ul>
+                                    <li>
+                                        <span class="active"></span>--无-- </li>
+                                    <li>
+                                        <span></span> 客户名称</li>
+                                    <li>
+                                        <span></span> 网站</li>
+                                    <li>
+                                        <span></span> 电话</li>
+                                    <li>
+                                        <span></span> 行业</li>
+                                    <li>
+                                        <span></span> 开单地址-街道</li>
+                                    <li>
+                                        <span></span> 开单地址-城市</li>
+                                    <li>
+                                        <span></span> 开单地址-省/市</li>
+                                    <li>
+                                        <span></span> 开单地址-国家/地区</li>
+                                    <li>
+                                        <span></span> 开单地址-邮编</li>
+                                    <li>
+                                        <span></span> 创建者</li>
+                                    <li>
+                                        <span></span> 创建时间</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="adapt">
+                            <input type="checkbox">
+                            <span>适应屏幕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_cont_text">
+                <table>
+                    <!-- <tr>
+                        <td style="min-width: 20px; max-width: 20px; height: 41px;">
+                            <i class="icon1"></i>
+                        </td>
+                        <td>
+                            <input type="checkbox" style="width:15px;height:15px;">
+                        </td>
+                        <td style="height: 70px; line-height: 14px;">
+                        </td>
+                        <td style="height: 70px; line-height: 14px; max-height: 70px; max-width: 70px; width: 70px;">
+                            <img src="../后台录入数据/upload/201812090950343.png" alt="">
+                        </td>
+                        <td style="height: 70px; line-height: 14px; max-height: 70px; max-width: 642px; width: 642px;">
+                            <div class="information">
+                                <div class="information_top">
+                                    <span class="ItopName">
+                                        <a href="javascript:;">欣然 王</a>
+                                    </span>
+                                    <span class="slash">/</span>
+                                    <span class="letter">n/a</span>
+                                </div>
+                                <div class="information_cont">
+                                    <span class="email">krismarrier@gmail.com</span>
+                                    <span class="slash">/</span>
+                                    <span class="numdel">555-555-5555</span>
+                                    <span class="slash">/</span>
+                                    <span class="numdel">555-555-5555</span>
+                                </div>
+                                <div class="information_foor">
+                                    <span class="email">质量工程师</span>
+                                    <span class="slash">/</span>
+                                    <span class="numdel">n/a</span>
+                                    <span class="slash">/</span>
+                                    <span class="numdel">广告</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="height: 47px; line-height: 14px; max-height: 47px; max-width: 193px; width: 193px;">
+                            <div class="informations">
+                                <div class="author">努力优秀</div>
+                                <div class="author">2018-12-05 08:29 上午</div>
+                            </div>
+                        </td>
+                        <td style="max-width: 540px; width: 540px;"></td>
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
+
+<script type="text/html" id="test">
+    {{if code==200}}
+        {{each data}}
+            <tr>
+                <td style="min-width: 20px; max-width: 20px; height: 41px;">
+                    <i class="icon1"></i>
+                </td>
+                <td>
+                    <input type="checkbox" style="width:15px;height:15px;">
+                </td>
+                <td style="height: 70px; line-height: 14px;">
+                </td>
+                <td style="height: 70px; line-height: 14px; max-height: 70px; max-width: 70px; width: 70px;">
+                    <img src="../后台录入数据/upload/{{$value.picture}}" alt="">
+                </td>
+                <td style="height: 70px; line-height: 14px; max-height: 70px; max-width: 642px; width: 642px;">
+                    <div class="information">
+                        <div class="information_top">
+                            <span class="ItopName">
+                                <a href="javascript:;">{{$value.name}} {{$value.surname}}</a>
+                            </span>
+                            <span class="slash">/</span>
+                            <span class="letter">n/a</span>
+                        </div>
+                        <div class="information_cont">
+                            <span class="email">{{$value.email}}</span>
+                            <span class="slash">/</span>
+                            <span class="numdel">{{$value.tel}}</span>
+                            <span class="slash">/</span>
+                            <span class="numdel">{{$value.mobile}}</span>
+                        </div>
+                        <div class="information_foor">
+                            <span class="email">{{$value.post}}</span>
+                            <span class="slash">/</span>
+                            <span class="numdel">n/a</span>
+                            <span class="slash">/</span>
+                            <span class="numdel">{{$value.clue}}</span>
+                        </div>
+                    </div>
+                </td>
+                <td style="height: 47px; line-height: 14px; max-height: 47px; max-width: 193px; width: 193px;">
+                    <div class="informations">
+                        <div class="author">{{$value.owner}}</div>
+                        <div class="author">{{$value.time}} 08:29 上午</div>
+                    </div>
+                </td>
+                <td style="max-width: 540px; width: 540px;"></td>
+            </tr>
+        {{/each}}
+        {{else}}
+        <tr>
+            <td>暂无记录</td>
+        </tr>
+    {{/if}}
+</script>
+
+<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/artTemplate.js/3.0.1/template.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url: "../后台录入数据/api1.php",
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                var html = template("test", data);
+                $('.right_cont_text table').html(html);
+            },
+        });
+    });
+
+    $(".vatText3").on('click', function (e) {
+        $(".vat_list").toggle();
+        $(document).one('click', function () {
+            $('.vat_list').hide();
+        });
+        e.stopPropagation();
+    });
+    $(".h_box").on('click', function (e) {
+        $("#optionsHolder").toggle();
+        $(document).one('click', function () {
+            $('#optionsHolder').hide();
+        });
+        e.stopPropagation();
+    });
+
+    $('.mt12').on('click', function () {
+        $('#filter').show();
+        $('.mt12').hide();
+    });
+
+    $('.setupsearch').on('input', function () {
+        var val = $('.setupsearch').val();
+        if (val == '') {
+            $('#search_clear').hide();
+        } else {
+            $('#search_clear').show();
+        }
+    })
+
+    $('#search_clear').on('click', function () {
+        $('.setupsearch').val('');
+        $(this).hide();
+    })
+
+    $(".check_box").change(function () {
+        var check = $(this).is(":checked");
+        console.log(check);
+        if (check == true) {
+            $(this).next().next().slideDown("slow");
+            $('#filters').show();
+        } else {
+            $(this).next().next().slideUp("slow");
+            $('#filters').hide();
+        }
+    })
+    $("#cv_tools").on('click', function (e) {
+        $(this).next().toggle();
+        $(document).one('click', function () {
+            $('#toolsId').hide();
+        });
+        e.stopPropagation();
+    });
+    $("#stage").on('click', function (e) {
+        $(this).next().toggle();
+        $(document).one('click', function () {
+            $('.h_lists').hide();
+        });
+        e.stopPropagation();
+    });
+    $(".canvas_Acc").on('click', function (e) {
+        $(this).find(".acco").toggle();
+        $(document).one('click', function () {
+            $('.acco').hide();
+        });
+        e.stopPropagation();
+    });
+    $(".sorts").on('click', function (e) {
+        $(this).next().toggle();
+        $(document).one('click', function () {
+            $('.sort_li').hide();
+        });
+        e.stopPropagation();
+    });
+</script>
