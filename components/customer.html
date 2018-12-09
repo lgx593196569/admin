@@ -8,7 +8,7 @@
     <title>客户</title>
     <link rel="stylesheet" href="../css/customer.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/rybCommon.css">
+    <!-- <link rel="stylesheet" href="../css/rybCommon.css"> -->
 </head>
 
 <body>
@@ -935,40 +935,39 @@
                                 <span></span>
                             </td>
                             <td class="tableHeaderBg2">
-                                <span></span>
+                                <input type="checkbox">
                             </td>
-                            <td class="tableHeaderBg3 active"></td>
                             <td class="tableHeaderBg4 active">
-                                交易名称
+                                客户名称
                             </td>
-                            <td class="tableHeaderBg5 active">金额</td>
-                            <td class="tableHeaderBg6 active">阶段</td>
-                            <td class="tableHeaderBg7 active">预计成交日期</td>
-                            <td class="tableHeaderBg8 active">客户名称</td>
-                            <td class="tableHeaderBg9 active">联系人名称</td>
-                            <td class="tableHeaderBg9 active">交易所有者</td>
+                            <td class="tableHeaderBg5 active" style="text-align:right;">电话</td>
+                            <td class="tableHeaderBg6 active">网址</td>
+                            <td class="tableHeaderBg7 active">客户所有者</td>
                         </tr>
                     </table>
-                    <table>
-                        <tr>
-                            <td class="tableHeaderBg1">
-                                <!-- <span></span> -->
-                            </td>
-                            <td class="tableHeaderBg2">
-                                <span></span>
-                            </td>
-                            <td class="tableHeaderBg3 active"></td>
-                            <td class="tableHeaderBg4 active">
-                                交易名称
-                            </td>
-                            <td class="tableHeaderBg5 active">金额</td>
-                            <td class="tableHeaderBg6 active">阶段</td>
-                            <td class="tableHeaderBg7 active">预计成交日期</td>
-                            <td class="tableHeaderBg8 active">客户名称</td>
-                            <td class="tableHeaderBg9 active">联系人名称</td>
-                            <td class="tableHeaderBg9 active">交易所有者</td>
-                        </tr>
+                    <table style="margin-top:2px;border-top:1px solid #eee;" class="tableContent">
                     </table>
+                </div>
+                <div class="listviewBorder123">
+                    <div class="alignleft">
+                        共计：10
+                    </div>
+                    <div class="alignright">
+                        <select name="" id="" style="margin-right:20px;">
+                            <option value="">10页每页记录数</option>
+                            <option value="">20页每页记录数</option>
+                            <option value="">30页每页记录数</option>
+                            <option value="">40页每页记录数</option>
+                            <option value="">50页每页记录数</option>
+                        </select>
+                        <div class="fenyaqi">
+                            <i class="leftjiantou"></i>
+                            <span style="margin-left:15px;">1</span>
+                            <span>到</span>
+                            <span style="margin-right:16px;">10</span>
+                            <i class="youjiantou"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -976,8 +975,41 @@
 </body>
 
 </html>
+<script src="http://cdn.staticfile.org/artTemplate.js/3.0.1/template.js"></script>
+<script id="test" type="text/html">
+    {{if code==200}}
+    {{each data}}
+        <tr style="border-bottom:1px solid #eee; height:50px;">
+            <td class="tableHeaderBg1">
+                <!-- <span></span> -->
+            </td>
+            <td class="tableHeaderBg2">
+                <input type="checkbox">
+            </td>
+            <td class="tableHeaderBg4 active">
+                {{$value.kehuming}}
+            </td>
+            <td class="tableHeaderBg5 active" style="text-align:right;">{{$value.dianhua}}</td>
+            <td class="tableHeaderBg6 active">{{$value.wangzhi}}</td>
+            <td class="tableHeaderBg7 active">{{$value.kehusuoyou}}</td>
+        </tr>
+    {{/each}}
+    {{/if}}
+</script>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
 </script>
 <script src="../js/customer.js"></script>
 <script src="../js/rybCoommon.js"></script>
+<script>
+    $.ajax({
+        type: "get",
+        url: "../php/ryb.php",
+        dataType: "json",
+        success: function (data) {
+            var html = template("test", data);
+            $(".tableContent").html(html);
+            console.log(data);
+        }
+    });
+</script>

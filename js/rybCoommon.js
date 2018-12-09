@@ -71,6 +71,7 @@ window.onresize = function () {
     b = document.documentElement.clientWidth;
     $("#rybContentForm").css("height", c * 0.9 + "px");
     $(".ryb_contentList").css("height", c * 0.9 + "px");
+    $(".ryb_contentList").css("width", b - 250 + "px");
     $("#rybContentForm ul").css("height", "80%");
 }
 $("#qingkong").on("click", function () {

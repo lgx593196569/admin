@@ -8,7 +8,7 @@
     <title>交易</title>
     <link rel="stylesheet" href="../css/transaction.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/rybCommon.css">
+    <!-- <link rel="stylesheet" href="../css/rybCommon.css"> -->
 </head>
 
 <body>
@@ -703,7 +703,7 @@
                                 <span></span>
                             </td>
                             <td class="tableHeaderBg2">
-                                <span></span>
+                                <input type="checkbox">
                             </td>
                             <td class="tableHeaderBg3 active"></td>
                             <td class="tableHeaderBg4 active">
@@ -718,73 +718,75 @@
                         </tr>
                     </table>
                     <table style="margin-top:2px;border-top:1px solid #eee;" class="tableContent">
-                        <tr style="border-bottom:1px solid #eee;">
-                            <td class="tableHeaderBg1">
-                                <!-- <span></span> -->
-                            </td>
-                            <td class="tableHeaderBg2">
-                                <span></span>
-                            </td>
-                            <td class="tableHeaderBg3 active"></td>
-                            <td class="tableHeaderBg4 active jiaoyi">
-                                吉祥如意餐饮
-                            </td>
-                            <td class="tableHeaderBg5 active jine" style="text-align:right;">￥60,000.00</td>
-                            <td class="tableHeaderBg6 active jieduan">提案/报价</td>
-                            <td class="tableHeaderBg7 active yujiyime">2018-12-08</td>
-                            <td class="tableHeaderBg8 active kehuming">吉祥如意餐饮</td>
-                            <td class="tableHeaderBg9 active"></td>
-                            <td class="tableHeaderBg9 active jiaoyisuoyou">努力优秀</td>
-                        </tr>
-                        <tr style="border-bottom:1px solid #eee;">
-                            <td class="tableHeaderBg1">
-                                <!-- <span></span> -->
-                            </td>
-                            <td class="tableHeaderBg2">
-                                <span></span>
-                            </td>
-                            <td class="tableHeaderBg3 active"></td>
-                            <td class="tableHeaderBg4 active jiaoyi">
-                                吉祥如意餐饮
-                            </td>
-                            <td class="tableHeaderBg5 active jine" style="text-align:right;">￥60,000.00</td>
-                            <td class="tableHeaderBg6 active jieduan">提案/报价</td>
-                            <td class="tableHeaderBg7 active yujiyime">2018-12-08</td>
-                            <td class="tableHeaderBg8 active kehuming">吉祥如意餐饮</td>
-                            <td class="tableHeaderBg9 active"></td>
-                            <td class="tableHeaderBg9 active jiaoyisuoyou">努力优秀</td>
-                        </tr>
                     </table>
+                </div>
+                <div class="listviewBorder123">
+                    <div class="alignleft">
+                        共计：10
+                    </div>
+                    <div class="alignright">
+                        <select name="" id="" style="margin-right:20px;">
+                            <option value="">10页每页记录数</option>
+                            <option value="">20页每页记录数</option>
+                            <option value="">30页每页记录数</option>
+                            <option value="">40页每页记录数</option>
+                            <option value="">50页每页记录数</option>
+                        </select>
+                        <div class="fenyaqi">
+                            <i class="leftjiantou"></i>
+                            <span style="margin-left:15px;">1</span>
+                            <span>到</span>
+                            <span style="margin-right:16px;">10</span>
+                            <i class="youjiantou"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 </body>
 
 </html>
+<script src="http://cdn.staticfile.org/artTemplate.js/3.0.1/template.js"></script>
 <script id="test" type="text/html">
     {{if code==200}}
     {{each data}}
-    <li>
-        <img src="upload/{{$value.imgName}}" alt="">
-        <p>文件名称：<span>{{$value.imgName}}</span></p>
-        <p>文件大小：<span>{{$value.imgSize}}</span></p>
-        <p>文件类型：<span>{{$value.imgType}}</span></p>
-    </li>
+    <tr style="border-bottom:1px solid #eee;height:50px;">
+            <td class="tableHeaderBg1">
+                <!-- <span></span> -->
+            </td>
+            <td class="tableHeaderBg2">
+                <input type="checkbox">
+            </td>
+            <td class="tableHeaderBg3 active biaoji">
+                {{if $value.biaoji!=""}}
+                <span class="top1"></span>
+                <span class="top2">{{$value.biaoji}}<i></i></span>
+                {{/if}}
+            </td>
+            <td class="tableHeaderBg4 active jiaoyi">
+                {{$value.kehuming}}
+            </td>
+            <td class="tableHeaderBg5 active jine" style="text-align:right;">￥{{$value.jine}}</td>
+            <td class="tableHeaderBg6 active jieduan">{{$value.jieduan}}</td>
+            <td class="tableHeaderBg7 active yujiyime">{{$value.yujichengjiao}}</td>
+            <td class="tableHeaderBg8 active kehuming">{{$value.kehuming}}</td>
+            <td class="tableHeaderBg9 active"></td>
+            <td class="tableHeaderBg9 active jiaoyisuoyou" style="font-size:16.4px;color: rgb(17, 17, 17);">{{$value.kehusuoyou}}</td>
+        </tr>
     {{/each}}
     {{/if}}
 </script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="../js/transaction.js"></script>
 <script src="../js/rybCoommon.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
     $.ajax({
         type: "get",
-        url: "ryb.php",
+        url: "../php/ryb.php",
         dataType: "json",
         success: function (data) {
-            // var html = template("test", data);
-            // $(".box").html(html);
+            var html = template("test", data);
+            $(".tableContent").html(html);
             console.log(data);
         }
     });
