@@ -58,8 +58,6 @@
                 </div>
             </div>
             <div class="user">
-                    
-                
                 <div class="ab">
                     <div class="banben">
                         <span>试用-旗舰版</span>
@@ -88,11 +86,42 @@
                         </div>
                         <a href="javascript:;" class="rili"></a>
                         <a href="javascript:;" class="setting"></a>
-                        <img src="images/image.jpg">
+                        <img src="images/image.jpg" class="learn">
+                       
                     </div>
                 </div> 
             </div>
         </nav>
+    </div> 
+    <div class="userfile">
+        <div class="user-top">
+            <div class="top-content">
+                <a href="javascript:;">努力优秀</a>
+                <p>User Id:<span>37980029</span></p>
+                <a href="javascript:;">我的账号</a>
+            </div>
+        </div>
+        <div class="user-con">
+            <div class="con-content">
+                <span style="font-size:12px;line-height:25px;">订购</span>
+                <p style="font-size:15px;line-height:25px;">旗舰版试用版在11天后过期</p>
+                <a href="javascript:;" style="font-size:15px;line-height:25px;">评估其它版本</a>
+            </div>
+        </div>
+        <div class="user-help">
+            <div class="help-content">
+                <p style="font-size:12px;line-height:25px;">需要帮助吗</p>
+                <p class="phone">400-660-8680</p>
+                <p class="email">support@zohocorp.com.cn</p>
+                <p><a href="javascript:;">资源</a></p>
+            </div>
+        </div>
+        <div>
+            <span style="padding:0 10px 0 25px; "><a herf="javascript:;">退出</a></span>
+        </div>
+        <div class="user-foot">
+            <p>可用于<span class="huawei"></span><span class="iphone"></span></p>
+        </div>
     </div>
     <div class="yqzufather">
         <div class="yqzu">
@@ -100,9 +129,10 @@
             <div class="foot-box">
                 <div>您至多可以创建<span>25</span>个页签组。每个页签组可以包含无限数量的页签。页签组中的页签访问权限基于用户角色。</div>
                 <div style="position:relative;">
-                    <div>
-                        <input type="button" value="创建标签页">
+                    <div style="width:500px;height:60px;">
+                        <input type="button" value="创建标签页">  
                     </div>
+                    <div class="yeqianzu">没有页签组</div>
                 </div>
             </div>
         </div>
@@ -198,22 +228,106 @@
             </div>
         </div>
     </div>
+    <div class="bigcon">
+        <div class="big-top">
+            <span class="sous"></span>
+            <input type="text" placeholder="搜索联系人 & 聊天">
+            <span class="closed"></span>
+        </div>
+        <div class="big-bottom">
+            <div class="let">
+                <span>聊天</span>
+                <p>没有更多的聊天</p>
+            </div>
+            <div class="let">
+                <span>联系人</span>
+                <p class="centers">您的聊天联系人列表将会显示在这里。在搜索框内输入您好友的邮箱地址来邀请他们</p>
+            </div>
+        </div>
+    </div>
     
     <iframe src="./components/index.html" frameborder="0" id="iframe"></iframe>
     <div class="footer">
         <div class="leftbox">
             <span class="lt icon iconfont icon-weixin" title="聊天"></span>
             <span class="lxr icon iconfont icon-lianxiren" title="联系人"></span>
+            <div class="ltlxr" id="ltlxr">
+                <div class="first">
+                    <div class="topbox">
+                        <img src="images/image.jpg" alt="">
+                        <div class="username">努力优秀</div>
+                        <input type="text" placeholder="Available">
+                        <span class="suoxiao" id="suoxiao">—</span>
+                        <span class="ltimg"></span>
+                    </div>
+                    <div class="conbox">
+                        <span class="sousuo"></span>
+                        <input type="text" placeholder="搜索联系人 & 聊天">
+                    </div>
+                    <div class="footbox">
+                        <div class="imgcon"></div>
+                        <div class="fontcon">
+                                您与人们和团队的会话将会显示在这里。您可以点击<span class="lxeadd">联系人</span>或者<span>频道</span>来参加到一个会话中。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ltlxr" id="ltlxr1">
+                <div class="first">
+                    <div class="topbox">
+                        <img src="images/image.jpg" alt="">
+                        <div class="username">努力优秀</div>
+                        <input type="text" placeholder="Available">
+                        <span class="suoxiao" id="suoxiao1">—</span>
+                        <span class="ltimg"></span>
+                    </div>
+                    <div class="conbox">
+                        <span class="sousuo"></span>
+                        <input type="text" placeholder="查找联系人">
+                    </div>
+                    <div class="footbox">
+                        <div class="imgcon"></div>
+                        <div class="fontcon">
+                                您的聊天联系人列表将会显示在这里。在搜索框内输入您好友的邮箱地址来邀请他们。
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="conbox">
-            <span>这是您的智能聊天( Ctrl + Space )</span>
+        <div class="centerbox">
+            <span class="ctrls">这是您的智能聊天(Ctrl + Space)</span>
         </div>
         <div class="rightbox">
             <ul>
-                <li><span class="bianqian"></span></li>
-                <li><span class="zia"></span></li>
-                <li><span class="huodong"></span></li>
-                <li><span class="zuijin"></span></li>
+                <li class="bianqians"><span class="bianqian"></span></li>
+                <li class="zias">
+                    <span class="zia"></span>
+                    <div class="ziacon">
+                        <div class="ziatop">
+                            <i id="logo"></i>
+                            <i id="sousuo">—</i>
+                        </div>
+                        <div class="zia-con">
+                                Zia尚未有可报告的事情。
+                                <br>
+                                一切似乎都在正常进行中。
+                        </div>
+                    </div>
+                </li>
+                <li class="huodongs">
+                    <span class="huodong"></span>
+                    <div class="hdcon">
+                        <div class="hdtop">
+                            <i class="hdlogo"></i>
+                            <i class="tx">提醒</i>
+                            <i class="closeds">—</i>
+                        </div>
+                        <div class="hd-con">
+                            找不到活动提醒
+                        </div>
+                    </div>
+                </li>
+                <li class="zuijins"><span class="zuijin"></span></li>
             </ul>    
         </div>
     </div>
@@ -221,3 +335,9 @@
 </html>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="js/home.js"></script>
+<script src="js/laydate.js"></script>
+<script>
+    laydate.render({
+        elem: '.rili' //指定元素
+    });
+</script>

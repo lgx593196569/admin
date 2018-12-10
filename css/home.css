@@ -59,6 +59,7 @@
     text-align: center;
     position: relative;
     cursor: pointer;
+    background: #f5f5f5;
 }
 .visite{
     background: transparent url(../images/icon.svg) no-repeat -283px -34px;
@@ -94,6 +95,7 @@
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
     text-align: center;
+    height: 52px;
 }
 .chageurl li:nth-child(1),.chageurl li:nth-child(2),.chageurl li:nth-child(4),.chageurl li:nth-child(5),.chageurl li:nth-child(7){
     width: 56.81px;
@@ -400,7 +402,7 @@
     vertical-align: top;
     color: #b2b2b2;
 }
-.footer .lt:hover{
+.footer .icon:hover{
     color: #208aed;
 }
 .footer .lxr{
@@ -415,15 +417,12 @@
     position: relative;
     vertical-align: top;
 }
-.footer .lxr:hover{
-    color: #208aed;
-}
-.footer .conbox{
-    width: 190px;
+.footer .centerbox{
+    width: 210px;
     height: 28px;
     padding-left: 261px;
 }
-.footer .conbox span{
+.footer .centerbox span{
     padding: 6px 0 6px 10px;
     cursor: pointer;
     line-height: 28px;
@@ -444,6 +443,7 @@
     height: 28px;
     border-left: 1px solid black;
     float:left;
+    cursor: pointer;
 }
 .footer .rightbox ul li:nth-child(1) span{
     background: url(../images/icon2.svg) no-repeat -5px -24px;
@@ -463,7 +463,7 @@
     top: 0;
     right:51px;
     bottom: 0;
-    left: 0;
+    left: 10px;
     margin: auto;
     position: absolute;
     display: inline-block;
@@ -622,7 +622,7 @@
     position:relative;
     width: 550px;
     margin: 0 auto;
-    /* display: none; */
+    display: none;
 }
 .yqzufather .yqzu{
     width: 555px;
@@ -651,7 +651,7 @@
     cursor: pointer;
 }
 .yqzufather .yqzu .foot-box{
-    height: 137px;
+    height: 300px;
     padding: 30px;
     max-height: 400px;
     overflow: auto;
@@ -661,7 +661,7 @@
     right: 10px;
     top: 20px;
     color: #fff;
-    background: #42a2eb url(//img.zohostatic.com.cn/crm/images/svgicons_43e8a_.svg) no-repeat -308px -1848px!important;
+    background: #42a2eb url(../images/icon.svg) no-repeat -308px -1848px!important;
     padding-left: 30px!important;
     border: 1px solid transparent;
     display: inline-block;
@@ -670,4 +670,359 @@
     padding:5.74px 30px;
     text-align: right;
     cursor: pointer;
+}
+.yeqianzu{
+    color: #bbb;
+    width: 495px;
+    height: 24px;
+    text-align:center;
+    margin-top: 30px;
+    border-top: 1px solid #eaeaea;
+    padding:25px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.userfile{
+    width: 297px;
+    height: 445px;
+    position: absolute;
+    background: white;
+    top: 52px;
+    right: 0;
+    display: none;
+}
+.userfile .user-top{
+    width: 275px;
+    height: 85px;
+    margin:15px 15px 5px 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.userfile .user-top .top-content{
+    padding:0 10px 0 10px; 
+}
+.userfile .user-top a{
+    color: #208aed;
+    line-height: 30px;
+}
+.userfile .user-con{
+    width: 275px;
+    height: 85px;
+    margin:15px 15px 5px 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.userfile .user-con .con-content{
+    padding:0 10px 0 10px; 
+}
+.userfile .user-help{
+    width: 275px;
+    height: 150px;
+    margin:15px 15px 5px 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.userfile .user-help .help-content{
+    padding:0 10px 0 10px; 
+}
+.userfile .user-help .help-content p{
+    line-height: 40px;
+}
+.user-foot{
+    width: 295px;
+    height: 40px;
+    font-size: 15px;
+    background: #f4f4f4;
+    position: absolute;
+    bottom: 0;
+}
+.user-foot p{
+    padding: 10px 0 10px 30px;
+    font-size:13px;
+    display: inline-block;
+}
+.user-foot p .huawei{
+    background: url(../images/huawei.png) no-repeat;
+    width: 15px;
+    height: 18px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 80px;
+}
+.user-foot p .iphone{
+    background: url(../images/icon.svg) -259px -2338px no-repeat;
+    width: 15px;
+    height: 18px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 110px;
+}
+.bigcon{
+    width: 1000px;
+    height: 550px;
+    top: 25%;
+    left:25%;
+    background-color: white;
+    z-index: 99;
+    border-radius: 3px;
+    position: fixed;
+    text-align: left;
+    display: none;
+    opacity: 0;
+    transition: 500ms;
+}
+.bigcon .big-top{
+    width: 1000px;
+    height: 107px;
+    line-height: 107px;
+    padding-left: 30px;
+}
+.bigcon .big-top .sous{
+    width: 34px;
+    height: 28px;
+    display: inline-block;
+    background: url(../images/sousuo.png) no-repeat;
+}
+.bigcon .big-top input{
+    width: 360px;
+    height: 107px;
+    border: none;
+}
+.bigcon .big-top .closed{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    z-index: 1;
+    background: url(../images/icon.svg) no-repeat -206px -571px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.big-bottom{
+    width: 974px;
+    margin: 0 auto;
+}
+.big-bottom .let{
+    width: 487px;
+    height: 414px;
+    float: left;
+}
+.big-bottom .let span{
+    margin-left: 20px;
+    border-bottom:1px solid #007fbb ; 
+}
+.big-bottom .let p{
+    padding-top: 20px;
+    margin: 0 auto ;
+    width: 400px;
+}
+.big-bottom .let p.centers{
+    text-align: center;
+}
+.ltlxr{
+    width: 261px;
+    height: 375px;
+    position: absolute;
+    bottom: 28px;
+    left: 0;
+    background: white;
+    border-radius: 10px 10px 0 0;
+}
+.ltlxr .topbox{
+    width: 261px;
+    height: 50px;
+    border-bottom: 1px solid #eaeaea;
+    position: relative;
+}
+.ltlxr .topbox img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.ltlxr .topbox .username{
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    width: 70%;
+    font-size: 13px;
+    text-align: left;
+    z-index: 10;
+    position: absolute;
+    top: 7px;
+    left: 50px;
+}
+.ltlxr .topbox .suoxiao{
+    float: right;
+    color: #797979;
+    cursor: pointer;
+    font-size: 10px;
+    margin-right: 2px;
+    margin-top: 5px;
+    width: 15px;
+    height: 15px;
+    line-height: 20px;
+    display: inline-block;
+}
+.ltlxr .topbox input{
+    color: #999;
+    display: inline-block;
+    font-size: 12px;
+    width: 70%;
+    height: 17px;
+    cursor: pointer;
+    border: none;
+    margin-left: 6px;
+}
+.ltlxr .topbox .ltimg{
+    background: url(../images/liaotian.png) no-repeat;
+    margin-right: 2px;
+    width: 15px;
+    height: 16px;
+    position: absolute;
+    bottom: 5px;
+    right: 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+.ltlxr .conbox{
+    width: 261px;
+    height: 31px;
+    border-bottom: solid 1px #eaeaea;
+    line-height: 31px;
+}
+.ltlxr .conbox .sousuo{
+    width: 15px;
+    height: 16px;
+    display: inline-block;
+    background: url(../images/sousuo1.png) no-repeat;
+    margin-left: 5px;
+}
+.ltlxr .conbox input{
+    border: none;
+    font-size: 13px;
+    width: 70%;
+    height: 28px;
+}
+.ltlxr .conbox span{
+    cursor: pointer;
+}
+.ltlxr .footbox{
+    width: 261px;
+    height: 242px;
+}
+.ltlxr .footbox .imgcon{
+    background: url(../images/icons.png) -89px -637px no-repeat;
+    margin-top: 50px;
+    height: 90px;
+    width: 90px;
+    position: relative;
+    left: 30%;
+}
+.ltlxr .footbox .fontcon{
+    width: 91%;
+    height: 78px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    color: #aaa;
+    margin: 5px auto;
+}
+.footbox .fontcon span:hover{
+    color: #208aed;
+}
+#ltlxr{
+    display: none;
+}
+#ltlxr1{
+    display: none;
+}
+.zias{
+    position: relative;
+}
+.ziacon{
+    background-color: #fff;
+    position: absolute;
+    width: 337px;
+    max-height: initial!important;
+    transition: 500ms all;
+    opacity: 0;
+    bottom: 28px;
+    z-index: 312;
+    right: -92px;
+    height: 861px;
+    display:none;
+}
+.ziacon .ziatop{
+    width: 322px;
+    height: 25px;
+    padding-right: 20px;
+    margin: 20px 0 0 20px;
+}
+.ziacon .ziatop #logo{
+    background: url(../images/icon.svg) no-repeat;
+    background-position: -191px -2387px;
+    width: 32px;
+    height: 25px;
+    display: inline-block;
+}
+.ziacon .ziatop #sousuo{
+    position: absolute;
+    right: 10px;
+    color: #b2b2b2;
+}
+.ziacon .zia-con{
+    margin-top: 30px;
+    margin-left: 15px;
+    background-color: rgba(30,199,134,0.1);
+    font-size: 14px;
+    border: 1px solid #1ec786;
+    width: calc(80%);
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+.hdcon{
+    position: absolute;
+    right: 0;
+    bottom: 28px;
+    width: 345px;
+    background: #fff;
+    z-index: 312;
+    height: 109px;
+    display: none;
+    transition: 500ms;
+}
+.hdcon .hdtop{
+    background: #f56d6d;
+    padding: 10px 15px;
+    width: 315px;
+    height: 28px;
+}
+.hdcon .hdtop .hdlogo{
+    background: url(../images/icon.svg) no-repeat -198px -33px;
+    height: 26px;
+    width: 30px;
+    display: inline-block;
+    margin-top: 2px;
+}
+.hdcon .hdtop .tx{
+    height: 28px;
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+}
+.hdcon .hdtop .closeds{
+    position: absolute;
+    top: 6px;
+    right: 10px;
+}
+.hdcon .hd-con{
+    line-height: 61px;
+    padding-left: 15px;
+    cursor:text;
 }
