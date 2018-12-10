@@ -506,3 +506,6 @@ body,html{
     height: 17px;
     /* margin-left: 20px; */
 }
+.tableContent tr:hover{
+    background: #eee;
+}
