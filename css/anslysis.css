@@ -1,0 +1,497 @@
+body{
+    height: 800px;
+}
+.center_left{
+    width: 13%;
+    height: 100%;
+    float: left;
+    overflow: scroll;
+    position: relative;
+    /* border-right: 1px solid gray; */
+}
+.center_top{
+    width: 100%;
+    margin-top: 20px;
+    height: 18px;
+}
+.center_top span{
+    display: inline-block;
+    font-size: 16px;
+    padding-left: 26px;
+    float: left;
+    width: 135px;
+    color: #666;
+}
+.center_top a{
+    display: inline-block;
+    margin-top: 5px;
+    background: url(../images/icon3.svg) no-repeat center;
+    background-position: -126px -90px;
+    width: 21px;
+    height: 20px;
+}
+.soure{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    padding: 20px 0 2px 0;
+    position: relative;
+}
+.soure input{
+    width: 205px;
+    font-size: 14px;
+    height: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    border: 1px solid #cbcbcb;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: transparent;
+}
+.soure input::placeholder{
+    color: #cbcbcb;
+    font-weight: 100;
+}
+.list{
+    width: 100%;
+    margin-top: 10px;
+    height: 100%;
+}
+.list ul li{
+    width: 90%;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    text-align: left;
+    padding-left: 20px;
+    cursor: pointer;
+    margin-left: 4px;
+}
+.list ul li:nth-child(1){
+    border-left: 4px solid #68abe3;
+    margin-left: 0;
+}
+.list ul li:nth-child(1) a{
+    color: #68abe3;
+}
+.list ul li:hover{
+    border-left: 4px solid gray;
+    margin-left: 0;
+}
+.list ul li:nth-child(1):hover{
+    border-left: 4px solid #68abe3;
+}
+.list ul li:last-child{
+    margin-bottom: 50px;
+}
+
+.delect{
+    width: 13%;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: #eaeaea;
+    z-index: 999;
+    box-shadow: 0 0 1px 0;
+    cursor: pointer;
+}
+.delect span{
+    font-size: 16px;
+}
+.delect i{
+    display: inline-block;
+    background: url(../images/icon.svg)no-repeat center;
+    background-position: -160px -246px;
+    width: 11px;
+    height: 13px;
+}
+.delect:hover{
+    background-color: #d4dbe1;
+}
+
+.center_right{
+    float: left;
+    width: 86.9%;
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+}
+.center_right .ctr_top{
+    padding: 15px 20px 5px 15px;
+    height: 38px;
+}
+.center_right .ctr_top .ctr_tit{
+    float: left;
+    margin-top: 5px;
+}
+.center_right .ctr_top .ctr_tit h2{
+    font-size: 20px;
+}
+.center_right .ctr_top .ctr_sor{
+    float: right;
+    margin-bottom: 5px;
+}
+.center_right .ctr_top .ctr_sor #ctr_one{
+    /* display: inline-block; */
+    float: left;
+}
+.center_right .ctr_top .ctr_sor #ctr_one .a1{
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    position: relative;
+    right: 0;
+    line-height: 10px;
+    margin-right: 10px;
+}
+.center_right .ctr_top .ctr_sor #ctr_one .a1 i{
+    display: inline-block;
+    background: url(../images/icon1.svg) no-repeat center;
+    background-position: -16px 0px;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.center_right .ctr_top .ctr_sor #ctr_one input {
+    color: white;
+    width: 90px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: #42a2eb;
+    border: solid 1px #42a2eb;
+    cursor: pointer;
+}
+.center_right .ctr_top .ctr_sor #ctr_one .a2{
+    padding: 7px;
+    width: 36px;
+    text-align: center;
+    height: 20px;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #c4c4c4;
+}
+.center_right .ctr_top .ctr_sor #ctr_one .a2:after{
+    background:url(../images/icon.svg) no-repeat -172px -214px;
+    vertical-align: middle;
+    width: 20px;
+    height: 5px;
+    display: inline-block;
+    content: "";
+}
+.center_right .ctr_top .ctr_sor #ctr_two{
+    color: #2C7BD0;
+    outline: none medium;
+    padding-left: 5px;
+    display: inline-block;
+    float: left;
+    margin-top: 10px;
+}
+.center_right .ctr_top .ctr_sor #ctr_two span{
+    display: inline-block;
+    background: url(../images/icon.svg) no-repeat center;
+    background-position: -230px -140px;
+    width: 17px;
+    height: 18px;
+}
+.center_right .ctr_bot{
+    width: 100%;
+    position: relative;
+    min-height: 700px;
+    padding-left: 15px;
+    padding-top: 25px;
+}
+.center_right .ctr_bot .xiansuo{
+    padding-bottom: 10px;
+    height: 182px;
+    width: 100%;
+}
+.center_right .ctr_bot .xiansuo .one{
+    background: #fff;
+    border-radius: 5px;
+    right: 5px;
+    left: 5px;
+    padding: 20px 25px 25px;
+    border: 1px solid #ddd;
+    cursor: default;
+    width: 20%;
+    height: 135px;
+    float: left;
+    position: relative;
+}
+.center_right .ctr_bot .xiansuo .one .top span{
+    color: #333;
+}
+.center_right .ctr_bot .xiansuo .one .bot{
+    margin-top: 25px;
+    width: 100%;
+    position: relative;
+}
+.center_right .ctr_bot .xiansuo .one .bot .ten{
+    font-size: 30px;
+}
+.center_right .ctr_bot .xiansuo .one .bot .jiao{
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 7px solid #6dc978;
+    position: absolute;
+    top: 25px;
+    left: 45px;
+}
+.center_right .ctr_bot .xiansuo .one .bot .hud{
+    margin-left: 25px;
+    font-size: 14px;
+    color: #6dc978;
+}
+.center_right .ctr_bot .xiansuo .one .bot p{
+    margin-top: 25px;
+    color: #888;
+    font-size: 14px;
+}
+.center_right .ctr_bot .xiansuo .two{
+    background: #fff;
+    border-radius: 5px;
+    right: 5px;
+    left: 5px;
+    padding: 20px 25px 25px;
+    border: 1px solid #ddd;
+    cursor: default;
+    width: 20%;
+    height: 135px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+.center_right .ctr_bot .xiansuo .two .top span{
+    color: #333;
+}
+.center_right .ctr_bot .xiansuo .two .bot{
+    padding-top: 35px;
+    width: 100%;
+    text-align: center;
+}
+.center_right .ctr_bot .xiansuo .two .bot span{
+    font-size: 14px;
+    color: #888;
+}
+
+.center_right .ctr_bot .xiansuo .three{
+    background: #fff;
+    border-radius: 5px;
+    right: 5px;
+    left: 5px;
+    padding: 20px 25px 25px;
+    border: 1px solid #ddd;
+    cursor: default;
+    width: 20%;
+    height: 135px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+.center_right .ctr_bot .xiansuo .three .top span{
+    color: #333;
+}
+.center_right .ctr_bot .xiansuo .three .bot{
+    padding-top: 35px;
+    width: 100%;
+    text-align: center;
+}
+.center_right .ctr_bot .xiansuo .three .bot span{
+    font-size: 30px;
+    color: #333;
+}
+
+.center_right .ctr_bot .xiansuo .four{
+    background: #fff;
+    border-radius: 5px;
+    right: 5px;
+    left: 5px;
+    padding: 20px 25px 25px;
+    border: 1px solid #ddd;
+    cursor: default;
+    width: 20%;
+    height: 135px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+.center_right .ctr_bot .xiansuo .four .top span{
+    color: #333;
+}
+.center_right .ctr_bot .xiansuo .four .bot{
+    margin-top: 25px;
+    width: 100%;
+    position: relative;
+}
+.center_right .ctr_bot .xiansuo .four .bot .ten{
+    font-size: 30px;
+    color: #6dc978;
+}
+.center_right .ctr_bot .xiansuo .four .bot .hud{
+    margin-left: 25px;
+    font-size: 14px;
+    color: #333;
+}
+.center_right .ctr_bot .xiansuo .four .bot p{
+    margin-top: 25px;
+    color: #888;
+    font-size: 14px;
+}
+.center_right .ctr_bot .shuliang{
+    width: 100%;
+    height: 278px;
+    margin-top: 15px;
+}
+.center_right .ctr_bot .shuliang .one{
+    background: #fff;
+    border-radius: 5px;
+    right: 5px;
+    left: 5px;
+    padding: 20px 25px 25px;
+    border: 1px solid #ddd;
+    cursor: default;
+    width: 26%;
+    height: 231px;
+    float: left;
+    position: relative;
+}
+.center_right .ctr_bot .shuliang .one .top span{
+    color: #333;
+}
+.center_right .ctr_bot .shuliang .one .bot{
+    text-align: center;
+    line-height: 210px;
+}
+.center_right .ctr_bot .shuliang .one .bot span{
+    color: #888;
+}
+
+
+
+.center_right .ctr_bot .shuliang .two{
+    background: #fff;
+    border-radius: 5px;
+    right: 5px;
+    left: 5px;
+    padding: 20px 25px 25px;
+    border: 1px solid #ddd;
+    cursor: default;
+    width: 61.4%;
+    height: 231px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+.center_right .ctr_bot .shuliang .two .top span{
+    color: #333;
+}
+.center_right .ctr_bot .shuliang .two .bot{
+    text-align: center;
+    line-height: 210px;
+}
+.center_right .ctr_bot .shuliang .two .bot span{
+    color: #888;
+}
+.center_right .ctr_bot .jixiao{
+    margin-top: 15px;
+    width: 100%;
+    height: 422px;
+}
+.center_right .ctr_bot .jixiao .one{
+    background: #fff;
+    border-radius: 5px;
+    right: 5px;
+    left: 5px;
+    padding: 20px 25px 25px;
+    border: 1px solid #ddd;
+    cursor: default;
+    width: 26%;
+    height: 422px;
+    float: left;
+    position: relative;
+}
+.center_right .ctr_bot .jixiao .one .top span{
+    color: #333;
+}
+.center_right .ctr_bot .jixiao .one .bot{
+    width: 100%;
+    margin-top: 15px;
+}
+.center_right .ctr_bot .jixiao .one .bot ul{
+    height: 391px;
+    float: left;
+    text-align: center;
+}
+.center_right .ctr_bot .jixiao .one .bot ul li{
+    width: 100%;
+    height: 45px;
+    padding: 10px 0;
+}
+.center_right .ctr_bot .jixiao .one .bot .ul1{
+    width: 40%;
+}
+.center_right .ctr_bot .jixiao .one .bot .ul2{
+    width: 50%;
+    background-color: #f8f8f8;
+}
+
+.center_right .ctr_bot .jixiao .two{
+    background: #fff;
+    border-radius: 5px;
+    right: 5px;
+    left: 5px;
+    padding: 20px 25px 25px;
+    border: 1px solid #ddd;
+    cursor: default;
+    width: 33%;
+    height: 422px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+.center_right .ctr_bot .jixiao .two .top span{
+    color: #333;
+}
+.center_right .ctr_bot .jixiao .two .bot{
+    text-align: center;
+    line-height: 400px;
+}
+.center_right .ctr_bot .jixiao .two .bot span{
+    color: #888;
+}
+
+
+.center_right .ctr_bot .jixiao .three{
+    background: #fff;
+    border-radius: 5px;
+    right: 5px;
+    left: 5px;
+    padding: 20px 25px 25px;
+    border: 1px solid #ddd;
+    cursor: default;
+    width: 24.7%;
+    height: 422px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+.center_right .ctr_bot .jixiao .three .top span{
+    color: #333;
+}
+.center_right .ctr_bot .jixiao .three .bot{
+    text-align: center;
+    line-height: 400px;
+}
+.center_right .ctr_bot .jixiao .three .bot span{
+    color: #888;
+}
