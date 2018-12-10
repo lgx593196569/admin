@@ -70,7 +70,7 @@ body{
     cursor: pointer;
     margin-left: 4px;
 }
-.list ul li:nth-child(1){
+.list ul li:nth-child(2){
     border-left: 4px solid #68abe3;
     margin-left: 0;
 }
