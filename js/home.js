@@ -3,9 +3,9 @@ var iconsvg = document.getElementsByClassName('iconsvg')[0];
 var lis = chageurl.getElementsByTagName('li');
 var xx = true;
 var zz = true;
-for(var i = 0;i < lis.length-1;i++){
-    lis[i].onclick = function(){
-        for(var j = 0;j < lis.length-1;j++){
+for (var i = 0; i < lis.length - 1; i++) {
+    lis[i].onclick = function () {
+        for (var j = 0; j < lis.length - 1; j++) {
             lis[j].className = "";
         }
         // console.log($(this).attr("data-url"));
@@ -13,8 +13,8 @@ for(var i = 0;i < lis.length-1;i++){
         this.className = "active";
     }
 }
-iconsvg.onclick = function(){
-    if(xx){
+iconsvg.onclick = function () {
+    if (xx) {
         $(".biaoqian").show();
         $(".addmd").hide();
         $(".add").hide();
@@ -23,13 +23,13 @@ iconsvg.onclick = function(){
         adds = true;
         xx = false;
         zz = true;
-    }else{
+    } else {
         $(".biaoqian").hide();
         xx = true;
     }
 }
-more.onclick = function(){
-    if(zz){
+more.onclick = function () {
+    if (zz) {
         $(".addmd").show();
         $(".biaoqian").hide();
         $(".add").hide();
@@ -38,32 +38,36 @@ more.onclick = function(){
         adds = true;
         xx = true;
         zz = false;
-    }else{
+    } else {
         $(".addmd").hide();
         zz = true;
     }
 }
 var bt = true;
-$(".bianqian").on("click",function(){
-    if(bt){
+$(".bianqian").on("click", function () {
+    if (bt) {
         this.style.backgroundPosition = '-23px -24px';
         $(".ziacon").hide();
         $(".zia").css("background-position","-231px -2390px");
         $(".huodong").css("background-position","-195px -4px");
         $(".zuijin").css("background-position","-170px -3px");
         bt = false;
+<<<<<<< HEAD
         zia = true;
         hd = true;
         zj = true;
     }else{
+=======
+    } else {
+>>>>>>> hyl
         this.style.backgroundPosition = '-5px -24px';
         bt = true;
     }
-    
+
 })
 var zia = true;
-$(".zia").on("click",function(){
-    if(zia){
+$(".zia").on("click", function () {
+    if (zia) {
         this.style.backgroundPosition = '-258px -2390px';
         $(".bianqian").css("background-position","-5px -24px");
         $(".huodong").css("background-position","-195px -4px");
@@ -73,10 +77,14 @@ $(".zia").on("click",function(){
             $(".ziacon").css("opacity","1");
         },100);
         zia = false;
+<<<<<<< HEAD
         bt = true;
         hd = true;
         zj = true;
     }else{
+=======
+    } else {
+>>>>>>> hyl
         this.style.backgroundPosition = '-231px -2390px';
         $(".ziacon").css("opacity","0");
         setTimeout(function(){
@@ -84,9 +92,10 @@ $(".zia").on("click",function(){
          },500);
         zia = true;
     }
-    
+
 })
 var hd = true;
+<<<<<<< HEAD
 $(".huodong").on("click",function(){
     if(hd){
         this.style.backgroundPosition = '-245px -4px';
@@ -108,12 +117,21 @@ $(".huodong").on("click",function(){
         setTimeout(function(){
            $(".hdcon").hide(); 
         },500);
+=======
+$(".huodong").on("click", function () {
+    if (hd) {
+        this.style.backgroundPosition = '-195px -4px';
+        hd = false;
+    } else {
+        this.style.backgroundPosition = '-245px -4px';
+>>>>>>> hyl
         hd = true;
         
     }
-    
+
 })
 var zj = true;
+<<<<<<< HEAD
 $(".zuijin").on("click",function(){
     if(zj){
         this.style.backgroundPosition = '-220px -3px';
@@ -128,16 +146,24 @@ $(".zuijin").on("click",function(){
         $(".zia").css("background-position","-231px -2390px");
     }else{
         this.style.backgroundPosition = '-170px -3px';
+=======
+$(".zuijin").on("click", function () {
+    if (zj) {
+        this.style.backgroundPosition = '-170px -3px';
+        zj = false;
+    } else {
+        this.style.backgroundPosition = '-220px -3px';
+>>>>>>> hyl
         zj = true;
         
     }
 })
-$(".sousuo").on("click",function(){
+$(".sousuo").on("click", function () {
     $(".banben").hide();
     $(".addmd").hide();
     $(".biaoqian").hide();
     $(this).hide();
-    $(".tianjia").css("margin-left",'24px');
+    $(".tianjia").css("margin-left", '24px');
     $(".kuang").show();
     $(".add").hide();
     $(".userfile").hide();
@@ -146,15 +172,15 @@ $(".sousuo").on("click",function(){
     zz = true;
     adds = true;
 })
-$(".close").on("click",function(){
+$(".close").on("click", function () {
     $(".sousuo").show();
     $(".banben").show();
     $(".kuang").hide();
-    $(".tianjia").css("margin-left",'0');
+    $(".tianjia").css("margin-left", '0');
 })
 var adds = true;
-$(".tianjia").on("click",function(){
-    if(adds){
+$(".tianjia").on("click", function () {
+    if (adds) {
         $(".add").show();
         $(".biaoqian").hide();
         $(".addmd").hide();
@@ -163,11 +189,12 @@ $(".tianjia").on("click",function(){
         xx = true;
         zz = true;
         adds = false;
-    }else{
-        $(".add").hide(); 
+    } else {
+        $(".add").hide();
         adds = true;
     }
 })
+<<<<<<< HEAD
 var _height = document.documentElement.clientHeight;
 var _width = document.documentElement.clientWidth;
 // console.log(_height);
@@ -204,20 +231,36 @@ $(".btn2").on("click",function(){
     setTimeout(function(){
         $(".yqfather").hide();
     },500)
+=======
+$("#chuangjian").on("click", function () {
+    $(".yqfather").css("display", "block");
+    $(".biaoqian").hide();
+    xx = true;
 })
-$(".convalue").on("focus",function(){
-    $(this).parent().css("border-bottom","1px solid #69cff3");
+$(".closed").on("click", function () {
+    $(".yqfather").css("display", "none");
 })
-$(".convalue").on("blur",function(){
-    $(this).parent().css("border-bottom","none");
+$(".btn1").on("click", function () {
+    $(".yqfather").css("display", "none");
+})
+$(".btn2").on("click", function () {
+    $(".yqfather").css("display", "none");
+>>>>>>> hyl
+})
+$(".convalue").on("focus", function () {
+    $(this).parent().css("border-bottom", "1px solid #69cff3");
+})
+$(".convalue").on("blur", function () {
+    $(this).parent().css("border-bottom", "none");
 })
 
 var checked = document.getElementsByClassName("checked");
 var check;
-for(var i = 0;i < checked.length;i++){   
-    checked[i].onclick = function(){
+for (var i = 0; i < checked.length; i++) {
+    checked[i].onclick = function () {
         console.log($(this).attr("data-check"))
         check = $(this).attr("data-check");
+<<<<<<< HEAD
         if(check == 'true'){
             $(this).next().css("background-position","-76px -588px");
             $(this).attr("data-check",false);
@@ -345,3 +388,17 @@ $(".closeds").on("click",function(){
      },500);
     hd = true;
 })
+=======
+        if (check == 'true') {
+            $(this).next().css("background-position", "-76px -588px");
+            $(this).attr("data-check", false);
+        } else {
+            $(this).next().css("background-position", "-55px -588px");
+            $(this).attr("data-check", true);
+        }
+
+
+    }
+
+}
+>>>>>>> hyl
