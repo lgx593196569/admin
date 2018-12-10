@@ -1,0 +1,434 @@
+html{
+    height: 100%;
+}
+body{
+    color: #111;
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+}
+/* 遮挡 */
+.all{
+    width: 100%;
+    height: 1300px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    z-index: 999;
+    opacity: .2;
+    display: none;
+}
+/* 页签遮挡 */
+.zhedang_yeqian{
+    width: 550px;
+    height: 0px;
+    background-color: white;
+    z-index: 9999;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.zhedang_yeqian .zhedang_yeqian_h{
+    background-color: #f1f0f3;
+    z-index: 9999999;
+    height: 70px;
+    width: 100%;
+    font-size: 30px;
+    line-height: 70px;
+    position: relative;
+    border-bottom: 1px solid gray;
+}
+.zhedang_yeqian .zhedang_yeqian_h h2{
+    margin-left: 33px;
+}
+.zhedang_yeqian .zhedang_yeqian_h span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url(../xzy_image/chas.png) center center no-repeat;
+    background-color: red;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 19px;
+    top: 20px;
+    cursor:pointer;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .top{
+    font-size: 17px;
+    border-bottom: 1px solid gray;
+    width: 70%;
+    margin: 0 10%;
+    margin-top: 50px;
+    height: 35px;
+    position: relative;
+    overflow: hidden;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .top p{
+    float: left;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .top input{
+    float: right;
+    height: 30px;
+    width: 230px;
+    line-height: 30px;
+    background-color: white;
+    border: 0px solid red;
+    outline:none;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .top span{
+    position: absolute;
+    display: inline-block;
+    width: 230px;
+    height: 3px;
+    background-color: black;
+    bottom: -2px;
+    right: 0px;
+    display: none;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .top .color{
+    background-color: aqua;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .zhedang_yeqian_nav{
+    background-color: pink;
+    width: 70%;
+    margin: 0 10%;
+    font-size: 17px;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .zhedang_yeqian_nav{
+    margin-top: 20px;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .zhedang_yeqian_nav p{
+    float: left;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .zhedang_yeqian_nav div{
+    float: right;
+    width: 230px;
+    height: 230px;
+    border: 1px solid gray;
+    overflow: hidden;
+    position: relative;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .zhedang_yeqian_nav div ul{
+    width: 210px;
+    height: 230px;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .zhedang_yeqian_nav div .gundongtiao{
+    display: inline-block;
+    width: 5px;
+    height: 70px;
+    background-color: #5a616b;
+    border-radius: 10px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: none;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .zhedang_yeqian_nav div ul li span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid gray;
+    margin-right: 10px;
+}
+.zhedang_yeqian .zhedang_yeqian_bianji .zhedang_yeqian_nav div ul .lis span{
+    background: url(../xzy_image/dui_hui.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+.zhedang_yeqian .zhedang_btn{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+.zhedang_yeqian .zhedang_btn span{
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 17px;
+    text-align: center;
+    border: 1px solid gray;
+    margin: 0 10px;
+    cursor:pointer;
+}
+.zhedang_yeqian .zhedang_btn span:nth-child(1):hover{
+    border: 1px solid black;
+}
+.zhedang_yeqian .zhedang_btn span:nth-child(2){
+    border: 1px solid aqua;
+    background-color: aqua;
+}.zhedang_yeqian .zhedang_btn span:nth-child(2):hover{
+    border: 1px solid aquamarine;
+    background-color: aquamarine;
+}
+/* 页签组管理页面 */
+/* .yeqian_guanli{
+    width: 550px;
+    height: 360px;
+    background-color: white;
+    z-index: 9999;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.yeqian_guanli .zhedang_yeqian_h{
+    background-color: #f1f0f3;
+    z-index: 9999999;
+    height: 70px;
+    width: 100%;
+    font-size: 30px;
+    line-height: 70px;
+    position: relative;
+    border-bottom: 1px solid gray;
+}
+.yeqian_guanli .zhedang_yeqian_h h2{
+    margin-left: 33px;
+}
+.yeqian_guanli .zhedang_yeqian_h span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url(../xzy_image/chas.png) center center no-repeat;
+    background-color: red;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 19px;
+    top: 20px;
+    cursor:pointer;
+} */
+/* 导航栏 */
+.nav{
+    width: 100%;
+    height: 50px;
+    background-color: #313948;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    line-height: 50px;
+    z-index: 99;
+}
+.nav .nav_l{
+    float: left;
+    display: flex;
+}
+.nav .nav_l .left_h{
+    float: left;
+    width: 14px;
+    height: 10px;
+    background: url(../xzy_image/hengxian.png) center center no-repeat;
+    background-color: red;
+    background-size: 100% 100%;
+    margin: 21px 10px;
+    position: relative;
+}
+.nav .nav_l .left_h .yin{
+    /* height: 130px; */
+    width: 100px;
+    background-color: white;
+    position: absolute;
+    left: -5px;
+    top: 25px;
+    z-index: 99999;
+    display: none;
+}
+.nav .nav_l .left_h .yin .yin_pss:hover{
+    background-color: #5a616b;
+}
+.nav .nav_l .left_h .yin h2{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: -10px;
+}
+.nav .nav_l .left_h .yin .yin_pss{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+}
+.nav .nav_l .left_h .yin .yin_ps{
+    font-size: 16px;
+    margin-left: 2px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+.nav .nav_l .left_h .yin .yin_ps span{
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    background: url(../xzy_image/dui.png) center center no-repeat;
+    background-size: 100% 100%;
+    margin-right: 5px;
+}
+.nav .nav_l .left_h .yin .yin_divs span{
+    padding: 5px 10px;
+    font-size: 13px;
+    color: #2C7BD0;
+    cursor:pointer;
+}
+.nav .nav_l .left_h .yin .yin_tumo{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: 50px;
+    left: 0px;
+    background-color: #f0f0f0;
+    z-index: -1;
+    display: none;
+}
+.nav .nav_l ul{
+    display: flex;
+}
+.nav .nav_l ul li{
+    padding: 0 10px;
+    color: rgb(238, 238, 238);
+    font-size: 15px;
+    font-weight: 100;
+    cursor:pointer;
+    height: 50px;
+}
+.nav .nav_l ul .color{
+    background-color: #5a616b;
+}
+.nav .nav_l .left_h{
+    margin-left: 10px;
+}
+.nav .nav_l .left_h span{
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: white;
+}
+.nav .nav_right{
+    float: right;
+}
+.nav .nav_right ul{
+    display: flex;
+}
+.nav .nav_right ul li{
+    position: relative;
+}
+.nav .nav_right ul li:nth-child(1){
+    height: 50px;
+    line-height: 24px;
+    font-size: 16px;
+    color: rgb(238, 238, 238);
+}
+.nav .nav_right ul li:nth-child(1) a{
+    display: inline-block;
+    float: right;
+    color: aqua;
+}
+.nav .nav_right ul li:nth-child(2){
+    width: 2px;
+    height: 30px;
+    background-color: gray;
+    margin: auto 10px;
+}
+.nav .nav_right ul li{
+    margin: auto 10px;
+}
+.nav .nav_right ul .yangshi1{
+    position: relative;
+}
+.nav .nav_right ul .yangshi1 input{
+    outline:none;
+    width: 250px;
+    height: 25px;
+    border-radius: 50px;
+    border: 0px solid red;
+    padding-left: 25px;
+    font-size: 15px;
+}
+.nav .nav_right ul .yangshi1 span:nth-child(1){
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../xzy_image/sousuo_white.png) center center no-repeat;
+    background-size: 100% 100%;
+    left: 9px;
+    top: 17px;
+}
+.nav .nav_right ul .yangshi1 span:nth-child(3){
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: url(../xzy_image/cha.png) center center no-repeat;
+    background-size: 100% 100%;
+    left: 255px;
+    top: 20px;
+    cursor:pointer;
+}
+.nav .nav_right ul .sy_two input{
+    display: none;
+}
+.nav .nav_right ul .sy_two p span:nth-child(1){
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../xzy_image/sousuo_an.png) center center no-repeat;
+    background-size: 100% 100%;
+    margin: -5px 0;
+}
+.nav .nav_right ul li:nth-child(4) p{
+    width: 20px;
+    height: 20px;
+    background: url(../xzy_image/shizi.png) center center no-repeat;
+    background-size: 100% 100%;
+    cursor:pointer;
+}
+.nav .nav_right ul li:nth-child(4){
+    margin-left: -5px;
+}
+.nav .nav_right ul li:nth-child(5) p{
+    width: 20px;
+    height: 20px;
+    background: url(../xzy_image/rili.png) center center no-repeat;
+    background-size: 100% 100%;
+    cursor:pointer;
+}
+.nav .nav_right ul li:nth-child(6) p{
+    width: 20px;
+    height: 20px;
+    background: url(../xzy_image/gongju.png) center center no-repeat;
+    background-size: 100% 100%;
+    cursor:pointer;
+}
+.nav .nav_right ul li:nth-child(7) p{
+    width: 40px;
+    height: 40px;
+    background: url(../xzy_image/ren.png) center center no-repeat;
+    background-size: 100% 100%;
+    cursor:pointer;
+}
+/* 我的主页 */
+.name{
+    width: 100%;
+    height: 44px;
+    background-color: #f9f9f9;
+    position: fixed;
+    top: 70px;
+    left: 0px;
+    z-index: -1;
+}
+/* 具体内容 */
+#iframe{
+    margin-top: 120px;
+    width: 100%;
+}
+/* 底部聊天 */
+.bottom{
+    width: 100%;
+    height: 28px;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 100;
+}

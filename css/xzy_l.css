@@ -1,0 +1,355 @@
+body {
+    font-family: "ProximaNovaRegular",sans-serif;
+    color: #111;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+}
+a,input{
+    cursor: pointer;
+}
+.box_top{
+    width: 100%;
+    height: 50px;
+    line-height: 2.429rem!important;
+    background-color: black;
+    line-height: 50px;
+    z-index: 99;
+}
+.all_c{
+    height: 36px;
+    width: 100%;
+    padding: 20px 0 10px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+.all_c:hover .c_l .rhh{
+    border:1px solid  #333;
+}
+.all_c .c_l{
+    width:200px;
+    height: 36;
+    /* border:1px solid red; */
+    position: absolute;
+    left: 50px;;
+}
+.all_c .c_l .rhh{
+    width:200px;
+    height: 36;
+    border:1px solid  #f8f8f8;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+.all_c .c_l .bj{
+    position: relative;
+    left: 230px;
+    top: -27px;
+    color: #777;
+    font-size: .857rem;
+    font-weight: normal;
+    display: none;
+}
+.all_c:hover .c_l .bj{
+    display: block;
+}
+.all_c .c_l .rhh span::after{
+    background: transparent url(//img.zohostatic.com.cn/crm/images/svgicons_43e8a_.svg) no-repeat -36px -939px;
+    width: 9px;
+    height: 5px;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.all_c .c_r{
+    width: 550px;
+    height: 36px;
+    /* border:1px solid red; */
+    position: absolute;
+    right: 0;
+}
+.c_r .jl{
+    width:100px;
+    height: 36px;;
+    /* border:1px solid red; */
+}
+.c_r .jl a .svgIconsImg1{
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    background: transparent url(../xzy_image/lianji1.png) no-repeat 0 0;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    /* border:1px solid red; */
+}
+.c_r .jl a .svgIconsImg2{
+    display: inline-block;
+    vertical-align: top;
+    width: 12px;
+    height: 14px;
+    background: transparent url(../xzy_image/lianjie2hong.png) no-repeat 0 0;
+    position: absolute;
+    left: 35px;
+    top: 11px;
+    /* border:1px solid red;  */
+}
+.all_c .c_r .all_a{
+    width:390px;
+    height: 36px;
+    position: absolute;
+    /* border:1px solid red; */
+    right:0px;
+    top: 0;
+}
+.all_c .c_r .all_a ul li{
+    float: left;
+    margin-left: 20px;
+}
+.all_c .c_r .all_a ul li input.dian{
+    padding: 8px 10px;
+    font-size: .929rem;
+    margin-right: 8px;
+}
+.c_r allbtn {
+    padding: 8px 12px;
+    display: inline-block;
+    background: #fff url(//img.zohostatic.com.cn/crm/images/svgicons_43e8a_.svg) no-repeat -309px -1074px;
+    padding-left: 30px;
+    border: solid 1px #c4c4c4;
+    font-size: .929rem;
+    margin-right: 8px;
+}
+.all_c .c_r .all_a ul li input:hover{
+    border-bottom: #111 1px solid;
+}
+.xzy{
+    width:220px;
+    height:420px;
+    background-color:#fff;
+    position: absolute;
+    -webkit-box-shadow: 0 1px 16px rgba(0,0,0,0.3)!important;
+    left: 0px;
+    top:33px;
+    z-index: 99;
+}
+.xzy .fx{
+    display:flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(119,119,119);
+}
+.xzy ss{
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    background: #fff url(//img.zohostatic.com.cn/crm/images/svgicons_43e8a_.svg) no-repeat 8px -177px;
+    opacity: .9;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: .929rem;
+    color: #000;
+    padding-left: 30px;
+    width: 100%!important;
+    height: 30px;
+}
+.xzy .fx_text{
+    height: 356px;
+    width:100%;
+    /* overflow: hidden; */
+    overflow:scroll;
+}
+.xzy .fx_text ul{
+    list-style:none;
+    padding:0;
+}
+.xzy .fx_text ul li{
+    margin:0;
+    padding:5px 0;
+}
+.xzy .fx_text ul li:hover{
+    background-color: #777777de;
+}
+.xzy .fx_text ul li:hover span{
+    width: 14px;
+    height: 14px;
+    background: transparent url(//img.zohostatic.com.cn/crm/images/svgicons_43e8a_.svg) no-repeat -73px -18px;
+    margin-left: 5px;
+}
+.xzy .fx_text ul li span{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background:url(../xzy_image/icon3.png) center no-repeat;
+    background-size:100% 100%;
+    margin-left:3px;
+    margin-right:4px;
+}
+.xzy .xjst{
+    color: #2083cf;
+    line-height: 1.286rem!important;
+    -webkit-font-smoothing: initial;
+    margin-left: 30px;
+}
+.box_content{
+    width: 250px;
+    height: 100%;
+    /* border:1px solid red; */
+}
+
+.r_f{
+    width: 1670px;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 10;
+    border-right: 1px solid #eee;
+    position: relative;
+    /* border:1px solid red; */
+    position: absolute;
+    right: 0;
+}
+#listViewTable .l_text {
+    max-width: 800px;
+}
+.listview .t_heBg td, .eventWeekHead, .eventDOW {
+    line-height: 35px;
+    height: 35px;
+    text-align: left;
+    font-size: .929rem;
+    color: #9d9d9d;
+    border-bottom: 3px double #e5e5e5;
+    font-weight: normal;
+    text-transform: uppercase;
+    outline: none;
+    padding: 0 10px;
+}
+.h_m10 {
+    min-width: 120px;
+}
+.t_he {
+    padding: 0 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    padding-left: 70px;
+}
+.t_heerBg td {
+    border-bottom: 3px double #e5e5e5!important;
+}
+.t_he a {
+    color: #777;
+}
+.t_he a {
+    color: #777;
+    font-size: .857rem!important;
+    vertical-align: sub;
+    cursor: pointer;
+}
+.r_f table{
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 0;
+    background-color: #fff;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+.r_f table thead tr{
+    height: 50px;
+}
+.tj_a{
+    width: 21px;
+    height: 17px;
+    background: url(//img.zohostatic.com.cn/crm/images/svgicons_43e8a_.svg) no-repeat -166px -139px;
+    margin-top: 1px;
+    display: block;
+    cursor: pointer;
+    /* position: absolute;
+    left: 20px;
+    top: 20px; */
+    margin-left: 20px;
+    margin-top: 18px;
+}
+.zt_all{
+    background: url(//img.zohostatic.com.cn/crm/images/svgicons_43e8a_.svg) no-repeat -79px -474px;
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    vertical-align: middle;
+    width: 15px;
+    position: absolute;
+    left: 70px;
+    top: 22px;
+}
+tbody tr {
+    position: relative;
+}
+tbody tr td.zt_f{
+    background: url(//img.zohostatic.com.cn/crm/images/svgicons_43e8a_.svg) no-repeat -79px -474px;
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    vertical-align: middle;
+    width: 15px;
+    position: absolute;
+    left: 20px;
+    margin-top: -26px;
+    margin-left: 50px;
+}
+.tj_one{
+    width: 21px;
+    height: 17px;
+    background: url(//img.zohostatic.com.cn/crm/images/svgicons_43e8a_.svg) no-repeat -166px -139px;
+    margin-top: 1px;
+    display: block;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 16px;
+    padding-top: 10px;
+}
+.listview1 .t_heBg1 td, .eventWeekHead1, .eventDOW1 {
+    line-height: 35px;
+    height: 35px;
+    text-align: left;
+    font-size: 1rem;
+    color: #9d9d9d;
+    border-bottom: 3px double #e5e5e5;
+    font-weight: normal;
+    text-transform: uppercase;
+    outline: none;
+    padding: 0 10px;
+}
+.t_m10 {
+    min-width: 130px;
+}
+.pl30{
+    padding-left: 50px;
+}
+.tab {
+    padding: 0 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: 50px;
+}
+.t_heerBg1 td {
+    border-bottom: 3px double #e5e5e5!important;
+}
+.tab{
+    color: #2C7BD0;
+    outline: none medium;
+    text-decoration: none;
+}
+.tab a {
+    vertical-align: sub;
+    cursor: pointer;
+}
+.visited1{
+    color: #162839;
+}
+.t_m10 tab l_tab a{
+    position: relative;
+    left: 70px;
+}
+.visited1{
+    position: relative;
+    left: 70px;
+}
