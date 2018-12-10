@@ -172,12 +172,12 @@ var _height = document.documentElement.clientHeight;
 var _width = document.documentElement.clientWidth;
 // console.log(_height);
 window.onload = function () {
-    $("#iframe").css("height", _height* 0.8 + "px");
+    $("#iframe").css("height", _height* 0.92 + "px");
 }
 window.onresize = function () {
     _height = document.documentElement.clientHeight;
     _width = document.documentElement.clientWidth;
-    $("#iframe").css("height", _height * 0.8 + "px");
+    $("#iframe").css("height", _height * 0.92 + "px");
 }
 $("#chuangjian").on("click",function(){
     $(".yqfather").css("display","block");
