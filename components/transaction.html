@@ -8,7 +8,11 @@
     <title>交易</title>
     <link rel="stylesheet" href="../css/transaction.css">
     <link rel="stylesheet" href="../css/style.css">
-    <!-- <link rel="stylesheet" href="../css/rybCommon.css"> -->
+    <style>
+        .ryb_tableHeaderBg #tableContent tr:hover{
+            background: #eee;
+        }
+    </style>
 </head>
 
 <body>
@@ -703,7 +707,7 @@
                                 <span></span>
                             </td>
                             <td class="tableHeaderBg2">
-                                <input type="checkbox">
+                                <input type="checkbox" id="quanxuan2">
                             </td>
                             <td class="tableHeaderBg3 active"></td>
                             <td class="tableHeaderBg4 active">
@@ -717,7 +721,7 @@
                             <td class="tableHeaderBg9 active">交易所有者</td>
                         </tr>
                     </table>
-                    <table style="margin-top:2px;border-top:1px solid #eee;" class="tableContent">
+                    <table style="margin-top:2px;border-top:1px solid #eee;" class="tableContent" id="tableContent">
                     </table>
                 </div>
                 <div class="listviewBorder123">

@@ -51,9 +51,14 @@
                 </div>
             </div>
             <div class="ryb_top_nav_right">
-                <span class="rybTopNavRight_img1 img active"></span>
+                <span class="rybTopNavRight_img1 img active">
+
+                </span>
                 <span class="rybTopNavRight_img2 img"></span>
-                <span class="rybTopNavRight_img3 img"></span>
+                <span class="rybTopNavRight_img3 img">
+                    <span class="rybTopNavRight_img31"></span>
+                    <span class="rybTopNavRight_img32"></span>
+                </span>
                 <span class="rybTopNavRight_daoru" style="margin-left:20px;">
                     <button></button>
                     <input type="button" value="导入" class='newwhitebtn' id="rybTopNavDaoru">
@@ -926,6 +931,55 @@
                     <input type="button" value="应用过滤器">
                     <a href="javaScript:;" id="qingkong">清空</a>
                 </div>
+                <span class="xiaoshi"></span>
+            </div>
+            <div class="ryb_contentList2">
+                <div class="ryb_tableHeaderBg">
+                    <div class="tableHeaderBgLeft">
+                        <input type="checkbox" id="quanxuan2">
+                        <span class="cas">画布视图：</span>
+                        <div class="casdiv">
+                            Deals - 画布
+                            <i></i>
+                        </div>
+                        <span class="bianjiryb">编辑</span>
+                    </div>
+                    <div class="tableHeaderBgRight">
+                        <span class="panxu">排序按</span>
+                        <i></i>
+                        <span style="color:#ddd;"> |</span>
+                        <input type="checkbox" id="shiying">
+                        <label for="shiying">
+                            适应屏幕
+                        </label>
+                    </div>
+                </div>
+                <div class="content">
+                    <ul class="lingyigenei" id="tableContent">
+
+                    </ul>
+                </div>
+                <div class="listviewBorder123">
+                    <div class="alignleft">
+                        共计：10
+                    </div>
+                    <div class="alignright">
+                        <select name="" id="" style="margin-right:20px;">
+                            <option value="">10页每页记录数</option>
+                            <option value="">20页每页记录数</option>
+                            <option value="">30页每页记录数</option>
+                            <option value="">40页每页记录数</option>
+                            <option value="">50页每页记录数</option>
+                        </select>
+                        <div class="fenyaqi">
+                            <i class="leftjiantou"></i>
+                            <span style="margin-left:15px;">1</span>
+                            <span>到</span>
+                            <span style="margin-right:16px;">10</span>
+                            <i class="youjiantou"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="ryb_contentList">
                 <div class="ryb_tableHeaderBg">
@@ -935,7 +989,7 @@
                                 <span></span>
                             </td>
                             <td class="tableHeaderBg2">
-                                <input type="checkbox">
+                                <input type="checkbox" id="quanxuan2">
                             </td>
                             <td class="tableHeaderBg4 active">
                                 客户名称
@@ -945,7 +999,7 @@
                             <td class="tableHeaderBg7 active">客户所有者</td>
                         </tr>
                     </table>
-                    <table style="margin-top:2px;border-top:1px solid #eee;" class="tableContent">
+                    <table style="margin-top:2px;border-top:1px solid #eee;" class="tableContent" id="tableContent">
                     </table>
                 </div>
                 <div class="listviewBorder123">
@@ -996,6 +1050,43 @@
     {{/each}}
     {{/if}}
 </script>
+<script id="test2" type="text/html">
+    {{if code==200}}
+    {{each data}}
+    <li>
+            <div class="contentLEft">
+                <input type="checkbox">
+                {{if $value.biaoji!=""}}
+                <span class="DCE1"></span>
+                    <span class="DCE2">
+                        {{$value.biaoji}}
+                        <i></i>
+                    </span>
+                {{/if}}
+            </div>
+            <div class="contentCEnter">
+                <p class="zuiding">	n/a-{{$value.jiaoyiming}}</p>
+                <p class="qici">{{$value.jiaoyiming}}</p>
+                <ul style="margin-top:20px;">
+                    <li>阶段</li>
+                    <li>预计成交时间</li>
+                    <li>交易所有者</li>
+                    <li>最近操作时间</li>
+                </ul>
+                <ul class="neirong">
+                    <li>{{$value.jieduan}}</li>
+                    <li>{{$value.yujichengjiao}}</li>
+                    <li>{{$value.kehusuoyou}}</li>
+                    <li style="width:auto;">{{$value.caozuotime}}</li>
+                </ul>
+            </div>
+            <div class="contentRIght">
+                <span>￥{{$value.jine}}</span>
+            </div>
+        </li>
+        {{/each}}
+        {{/if}}
+</script>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
 </script>
@@ -1008,7 +1099,9 @@
         dataType: "json",
         success: function (data) {
             var html = template("test", data);
+            var html2 = template("test2", data);
             $(".tableContent").html(html);
+            $(".lingyigenei").html(html2);
             console.log(data);
         }
     });

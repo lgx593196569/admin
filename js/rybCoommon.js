@@ -1,4 +1,13 @@
 var off = true;
+$("#quanxuan2").on("click", function () {
+    if ($("#quanxuan2").prop("checked") == true) {
+        $("#tableContent input[type='checkbox']").prop("checked", true);
+        $("#tableContent tr").css("background", "#fff7ea");
+    } else {
+        $("#tableContent input[type='checkbox']").prop("checked", false);
+        $("#tableContent tr").css("background", "#fff")
+    }
+});
 document.onclick = function (evt) {
     var event = evt || window.event;
     var a = event.target || event.srcElement;
@@ -64,6 +73,8 @@ window.onload = function () {
     $("#rybContentForm").css("height", c * 0.9 + "px");
     $(".ryb_contentList").css("height", c * 0.9 + "px");
     $(".ryb_contentList").css("width", b - 250 + "px");
+    $(".ryb_contentList2").css("height", c * 0.9 + "px");
+    $(".ryb_contentList2").css("width", b - 250 + "px");
     $("#rybContentForm ul").css("height", "80%");
 }
 window.onresize = function () {
@@ -72,6 +83,8 @@ window.onresize = function () {
     $("#rybContentForm").css("height", c * 0.9 + "px");
     $(".ryb_contentList").css("height", c * 0.9 + "px");
     $(".ryb_contentList").css("width", b - 250 + "px");
+    $(".ryb_contentList2").css("height", c * 0.9 + "px");
+    $(".ryb_contentList2").css("width", b - 250 + "px");
     $("#rybContentForm ul").css("height", "80%");
 }
 $("#qingkong").on("click", function () {
