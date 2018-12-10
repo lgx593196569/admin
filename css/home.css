@@ -488,6 +488,8 @@
     width: 550px;
     margin: 0 auto;
     display: none;
+    opacity: 0;
+    transition: 500ms;
 }
 .yqfather .yqbox{
     width: 550px;
@@ -623,6 +625,8 @@
     width: 550px;
     margin: 0 auto;
     display: none;
+    opacity: 0;
+    transition: 500ms;
 }
 .yqzufather .yqzu{
     width: 555px;
