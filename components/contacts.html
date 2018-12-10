@@ -849,6 +849,10 @@
             </div>
         </div>
         <div class="right_cont">
+            <span class="collapse_show dib" id="collapseShow">
+                <span class="fCollapseIn dib"></span>
+                <span class="fCollapseOut dib"></span>
+            </span>
             <div class="canvas_rig">
                 <div class="canvasview">
                     <div class="cv_top">
@@ -918,7 +922,7 @@
                 </div>
             </div>
             <div class="right_cont_text">
-                <table>
+                <table style="width:100%;">
                     <!-- <tr>
                         <td style="min-width: 20px; max-width: 20px; height: 41px;">
                             <i class="icon1"></i>
@@ -966,10 +970,73 @@
                     </tr> -->
                 </table>
             </div>
+            <div class="right_top">
+                <table>
+                    <td style="min-width: 20px; max-width: 20px; height: 41px;">
+                        <i class="icon1"></i>
+                    </td>
+                    <td>
+                        <input type="checkbox" style="width:15px;height:15px;">
+                    </td>
+                    <td style="min-width: 110px; max-width: 110px; height: 41px;"></td>
+                    <td style="min-width: 152px; max-width: 152px; height: 41px;">
+                        <a href="javascript:;">联系人名称</a>
+                    </td>
+                    <td style="min-width: 233px; max-width: 233px; height: 41px;">
+                        <a href="javascript:;">客户名称</a>
+                    </td>
+                    <td style="min-width: 311px; max-width: 311px; height: 41px;">
+                        <a href="javascript:;">邮箱</a>
+                    </td>
+                    <td style="min-width: 189px; max-width: 189px; height: 41px;">
+                        <a href="javascript:;">电话</a>
+                    </td>
+                    <td style="min-width: 171px; max-width: 171px; height: 41px;">
+                    </td>
+                    <td style="min-width: 154px; max-width: 154px; height: 41px;">
+                        <a href="javascript:;">线索所有者</a>
+                    </td>
+                    <td style="min-width: 50px; max-width: 50px; height: 41px;"></td>
+                </table>
+            </div>
+            <div class="right_cont_text1">
+                <table style="width:100%;">
+                    <!-- <tr>
+                        <td style="min-width: 100px; max-width: 100px; height: 41px;">
+                            <i class="icon1"></i>
+                        </td>
+                        <td>
+                            <input type="checkbox" style="width:15px;height:15px;">
+                        </td>
+                        <td style="min-width: 110px; max-width: 110px; height: 41px;"></td>
+                        <td style="min-width: 152px; max-width: 152px; height: 41px;">
+                            <a href="javascript:;">三 张</a>
+                        </td>
+                        <td style="min-width: 233px; max-width: 233px; height: 41px;">
+                            <a href="javascript:;" class="text_s">创新业务系统</a>
+                        </td>
+                        <td style="min-width: 311px; max-width: 311px; height: 41px;">
+                            <a href="javascript:;">Chau-kitzman@qq.com</a>
+                        </td>
+                        <td style="min-width: 189px; max-width: 189px; height: 41px;" class="td_d">
+                            <a href="javascript:;" class="text_s">555-555-5555</a>
+                            <i class="icon2"></i>
+                        </td>
+                        <td style="min-width: 171px; max-width: 171px; height: 41px;">
+                            <a href="javascript:;" class="text_s"> 广告</a>
+                        </td>
+                        <td style="min-width: 154px; max-width: 154px; height: 41px;">
+                            <a href="javascript:;" class="text_s">努力优秀</a>
+                        </td>
+                        <td style="min-width: 50px; max-width: 50px; height: 41px;">
+                        </td>
+                    </tr> -->
+                </table>
+            </div>
             <div class="right_foor_fiexd">
                 <div class="zongji">共计：10</div>
             </div>
-        </div> 
+        </div>
     </div>
 </body>
 
@@ -985,9 +1052,16 @@
                 <td>
                     <input type="checkbox" style="width:15px;height:15px;">
                 </td>
-                <td style="height: 70px; line-height: 14px;">
+                <td style="min-width: 110px; max-width: 110px; height: 61px; position:relative;">
+                    {{if $value.state==1 }}
+                        <span class="fl w20 h18 ml15 TaskSmall"></span>
+                        <span class="fl dib h_overdue">  Dec {{$value.nums}} </span>
+                        <span class="h_overdue_ss"></span>
+                    {{else}}
+                        <span></span>
+                    {{/if}}
                 </td>
-                <td style="height: 70px; line-height: 14px; max-height: 70px; max-width: 70px; width: 70px;">
+                <td style="height: 90px; line-height: 14px; max-height: 90px; max-width: 90px; width: 90px;">
                     <img src="../后台录入数据/upload/{{$value.picture}}" alt="">
                 </td>
                 <td style="height: 70px; line-height: 14px; max-height: 70px; max-width: 642px; width: 642px;">
@@ -1021,13 +1095,59 @@
                         <div class="author">{{$value.time}} 08:29 上午</div>
                     </div>
                 </td>
-                <td style="max-width: 540px; width: 540px;"></td>
+                <td style="max-width: 580px; width: 580px;"></td>
             </tr>
         {{/each}}
         {{else}}
         <tr>
             <td>暂无记录</td>
         </tr>
+    {{/if}}
+</script>
+<script type="text/html" id="test1">
+    {{if code==200}}
+    {{each data}}
+    <tr>
+        <td style="min-width: 20px; max-width: 20px; height: 61px;">
+            <i class="icon1"></i>
+        </td>
+        <td>
+            <input type="checkbox" style="width:15px;height:15px;">
+        </td>
+        <td style="min-width: 110px; max-width: 110px; height: 61px; position:relative;">
+            {{if $value.state==1 }}
+                <span class="fl w20 h18 ml15 TaskSmall"></span>
+                <span class="fl dib h_overdue">  Dec {{$value.nums}} </span>
+                <span class="h_overdue_ss"></span>
+            {{else}}
+                <span></span>
+            {{/if}}
+        </td>
+        <td style="min-width: 152px; max-width: 152px; height: 61px;">
+            <a href="javascript:;">{{$value.name}} {{$value.surname}}</a>
+        </td>
+        <td style="min-width: 233px; max-width: 233px; height: 61px;">
+        </td>
+        <td style="min-width: 311px; max-width: 311px; height: 61px;">
+            <a href="javascript:;">{{$value.email}}</a>
+        </td>
+        <td style="min-width: 189px; max-width: 189px; height: 61px;" class="td_d">
+            <a href="javascript:;" class="text_s">{{$value.tel}}</a>
+            <i class="icon2"></i>
+        </td>
+        <td style="min-width: 171px; max-width: 171px; height: 61px;">
+        </td>
+        <td style="min-width: 154px; max-width: 154px; height: 61px;">
+            <a href="javascript:;" class="text_s">{{$value.owner}}</a>
+        </td>
+        <td style="min-width: 130px; max-width: 130px; height: 61px;">
+        </td>
+    </tr>
+    {{/each}}
+    {{else}}
+    <tr>
+        <td>暂无记录</td>
+    </tr>
     {{/if}}
 </script>
 
@@ -1044,6 +1164,42 @@
                 var html = template("test", data);
                 $('.right_cont_text table').html(html);
             },
+        });
+        $('.listctive').on('click', function () {
+            $('.right_top').show();
+            $('.right_cont_text1').show();
+            $('.canvas_rig').hide();
+            $('.right_cont_text').hide();
+            $(this).css('background-position', '-44px -100px')
+            $('.cveditIcon').css('background-position', '-229px -2313px');
+            $.ajax({
+                url: "../后台录入数据/api1.php",
+                type: "POST",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    var html = template("test1", data);
+                    $('.right_cont_text1 table').html(html);
+                },
+            });
+        });
+        $('.cveditIcon').on('click', function () {
+            $('.right_top').hide();
+            $('.right_cont_text1').hide();
+            $('.canvas_rig').show();
+            $('.right_cont_text').show();
+            $('.listctive').css('background-position', '-3px -100px')
+            $(this).css('background-position', '-234px -2417px')
+            $.ajax({
+                url: "../后台录入数据/api1.php",
+                type: "POST",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    var html = template("test", data);
+                    $('.right_cont_text1 table').html(html);
+                },
+            });
         });
     });
 
@@ -1120,4 +1276,16 @@
         });
         e.stopPropagation();
     });
+    $('.fCollapseIn').on('click', function () {
+        $('.left_filter').css('display', 'none');
+        $(this).hide();
+        $(this).next().show();
+        $('.collapse_show').css('margin-left', '0px');
+    })
+    $('.fCollapseOut').on('click', function () {
+        $('.left_filter').css('display', 'block');
+        $(this).hide();
+        $(this).prev().show();
+        $('.collapse_show').css('margin-left', '250px');
+    })
 </script>

@@ -478,6 +478,9 @@ input:focus, text-area:focus, button:focus {
 .disabled {
     color: #ccc!important;
 }
+.right_cont_text{
+    display: block;
+}
 .right_cont_text .icon1{
     width: 21px;
     height: 17px;
@@ -857,6 +860,7 @@ a.createlink span{
     border-bottom: 1px solid #eee;
     height: 41px;
     border-top:1px solid #eee;
+    display: block;
 }
 .right_top table td{
     text-align: left;
@@ -904,4 +908,315 @@ a.createlink span{
     font-size: 15px;
     padding-left: 30px;
     line-height: 54px;
+}
+.collapse_show{
+    width: 10px;
+    background: #b4b4b4;
+    text-align: center;
+    line-height: 40px;
+    max-height: 40px;
+    top: 50%;
+    position: fixed;
+    left: 0;
+    cursor: pointer;
+    z-index: 5;
+    margin-left: 249px;
+}
+.collapse_show .fCollapseIn{
+    width: 4px;
+    height: 7px;
+    background: url(../images/icon.svg) no-repeat;
+    background-position: -277px -597px;
+}
+.collapse_show .fCollapseOut{
+    width: 7px;
+    height: 32px;
+    background: url(../images/icon.svg) no-repeat;
+    background-position: -286px -582px;
+    display: block;
+}
+.canvas_rig{
+    border-bottom: 1px solid #ccc;
+    display: none;
+}
+.canvas_rig .canvasview{
+    display: flex;
+    display: -webkit-flex;
+    height: 45px;
+    justify-content: space-between;
+}
+.canvas_rig .canvasview .cv_top{
+    height: 32px;
+    margin-top: 8px;
+    display: flex;
+    display: -webkit-flex;
+    margin-left: 50px;
+    line-height: 32px;
+    font-size: 15px;
+}
+.canvas_rig .canvasview .cv_top input{
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+}
+.canvas_rig .canvasview .cv_top .sp_h{
+    margin-left: 15px;
+    color: #777;
+}
+.canvas_rig .canvasview .cv_top .canvas_Acc{
+    margin-left: 15px;
+    font-size: 13px;
+    position: relative;
+    width: 130px; 
+    border-radius: 3px;
+    border: 1px solid #fff; 
+}
+.canvas_rig .canvasview .cv_top .canvas_Acc .acco{
+    width: 220px;
+    background: #fff;
+    box-shadow: #d7d3e2 0px 3px 10px 3px;
+    position: absolute;
+    left: 0px;
+    top: 32px;
+    display: none;
+    z-index: 99;
+}
+.canvas_rig .canvasview .cv_top .canvas_Acc .acco .sp{
+    font-size: 10px;
+    color: #ccc;
+    margin-left: 10px;
+    /* margin-top: 5px; */
+}
+.canvas_rig .canvasview .cv_top .canvas_Acc .acco>div{
+    line-height: 30px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+.canvas_rig .canvasview .cv_top .canvas_Acc .acco>div .sp1{
+    width: 12px;
+    height: 8px;
+    background: url(../images/icon.svg) -283px -34px;
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+.canvas_rig .canvasview .cv_top .canvas_Acc .acco>div .sp2{
+    margin-left: 30px;
+}
+.canvas_rig .canvasview .cv_top .canvas_Acc .acco ul li{
+    line-height: 30px;
+    padding-left: 20px;
+}
+.canvas_rig .canvasview .cv_top .canvas_Acc:hover{
+    border: 1px solid #ccc; 
+}
+.canvas_rig .canvasview .cv_top .canvas_Acc .sps{
+    margin-left: 15px;
+    display: inline-block;
+    font-size: 14px;
+}
+.canvas_rig .canvasview .cv_top .canvas_Acc i{
+    width: 9px;
+    height: 5px;
+    display: inline-block;
+    background: url(../images/icon.svg) -36px -939px;
+}
+.canvas_rig .canvasview .cv_top a{
+    margin-left: 15px;
+    color: #777;
+    font-size: 14px;
+    font-weight: normal;
+}
+.canvasview .tablescroll{
+    height: 25px;
+    display: flex;
+    display: -webkit-flex;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.canvasview .tablescroll .sort{
+    position: relative;
+    margin-right: 10px;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+    line-height: 25px;
+}
+.canvasview .tablescroll .sort span{
+    font-size: 15px;
+}
+.canvasview .tablescroll .sort i{
+    width: 9px;
+    height: 5px;
+    display: inline-block;
+    background: url(../images/icon.svg) -36px -939px;
+    margin-left: 20px;
+}
+.canvasview .tablescroll .sort .sort_li{
+    width: 200px;
+    height: 243px;
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    box-shadow: #d7d3e2 0px 3px 10px 3px; 
+    display: none;
+    z-index: 99;
+    background: #fff;
+}
+.canvasview .tablescroll .sort .sorts{
+    position: relative;
+    z-index: 11;
+}
+.canvasview .tablescroll .sort .sort_li .sort_search{
+    width: 198px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.canvasview .tablescroll .sort .sort_li .sort_search span{
+    width: 24px;
+    height: 26px;
+    background: url(../images/icon.svg) -306px -992px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.canvasview .tablescroll .sort .sort_li .sort_search input{
+    width: 165px;
+    height: 20px;
+    padding: 5px 5px 5px 28px;
+}
+.canvasview .tablescroll .sort .sort_li ul{
+    overflow-y: scroll;
+    height: 200px;
+    margin-top: 5px;
+    z-index: 99;
+}
+.canvasview .tablescroll .sort .sort_li ul li{
+    line-height: 32px;
+    height: 32px;
+    position: relative;
+    padding: 6px 25px;
+}
+.canvasview .tablescroll .sort .sort_li ul li:hover{
+    background: #ccc;
+}
+.canvasview .tablescroll .sort .sort_li ul li span{
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    margin-top: -5px;
+    background: url(../images/icon.svg) -283px -34px;
+    display: none;
+}
+.canvasview .tablescroll .sort .sort_li ul li span.active{
+    display: block;
+}
+.canvasview .tablescroll .adapt{
+    display: flex;
+    display: -webkit-flex;
+}
+.canvasview .tablescroll .adapt input{
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+}
+.canvasview .tablescroll .adapt span{
+    font-size: 15px;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+.right_cont_text1{
+    display: none;
+}
+.right_cont_text1 .icon1{
+    width: 21px;
+    height: 17px;
+    border: 0;
+    background: url(../images/icon.svg) no-repeat -126px -39px;
+    margin-top: 1px;
+    display: none;
+    cursor: pointer;
+}
+.right_cont_text1 td{
+    text-align: left;
+    font-size: 15px;
+    color: #9d9d9d;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: normal;
+    text-transform: uppercase;
+    outline: none;
+    padding: 0 10px;
+    vertical-align: middle;
+}
+.right_cont_text1 td a{
+    font-size: 16px;
+}
+.right_cont_text1 td img{
+    width: 50px;
+    height: 50px;
+}
+.right_cont_text1 td .information{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+}
+.right_cont_text1 td .information div{
+    margin-top: 5px;
+}
+.right_cont_text1 td .information .information_top{
+    display: flex;
+    display: -webkit-flex;
+    margin-top: 0px;
+}
+.right_cont_text1 td .information .information_top .ItopName a{
+    color: #222;
+    font-size: 22px;
+    line-height: 22px;
+}
+.right_cont_text1 td .information .information_top .ItopName a:hover{
+    text-decoration: none;
+}
+.slash{
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0 7px;
+    vertical-align: top;
+}
+.right_cont_text1 td .information .information_top .letter{
+    color: #d67e2f;
+    font-size: 16px;
+    line-height: 16px;
+    padding-bottom: 2px;
+}
+.email,.numdel{
+    color: #333;
+}
+.right_cont_text1 td .information{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+}
+.right_cont_text1 td .informations{
+    height: 46px;
+    line-height: 15px;
+    vertical-align: top;
+    word-wrap: break-word;
+    text-align: right;
+}
+.right_cont_text1 td .informations .author{
+    text-align: right;
+    line-height: 15px;
+    color: #666666;
+    font-size: 15px;
+    padding-top: 3px;
+}
+.right_cont_text1 tr:hover{
+    background-color: #f8f8f8;
+}
+.right_cont_text1 tr:hover .icon1{
+    display: block;
 }
